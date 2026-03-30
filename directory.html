@@ -44,7 +44,54 @@
     .contact-item { display: flex; align-items: center; gap: 0.5rem; color: #0e7996; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: gap 0.2s ease; }
     .contact-item:hover { gap: 0.75rem; }
     @media (max-width: 768px) { .directory-header { padding: 100px 0 40px; } .filter-section { flex-direction: column; align-items: stretch; } .filter-group { justify-content: center; } .filter-btn { flex: 1; min-width: 120px; justify-content: center; } .business-contact { flex-direction: column; gap: 0.75rem; } }
-  </style>
+  
+    /* Badge Styles */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .badge-verified {
+      background: linear-gradient(135deg, #06c8ff, #0e7996);
+      color: white;
+    }
+    .badge-basic {
+      background: #e0e0e0;
+      color: #666;
+    }
+    .business-card.verified {
+      border-left: 4px solid #06c8ff;
+    }
+    .contact-hidden {
+      opacity: 0.6;
+      font-style: italic;
+    }
+    .member-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: linear-gradient(135deg, #06c8ff, #0e7996);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+    .member-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(6, 200, 255, 0.4);
+    }
+
+</style>
 </head>
 <body>
   <header class="header">
@@ -103,7 +150,7 @@
           <article class="business-card" data-category="construction" data-location="jeffreys-bay">
             <div class="business-header">
               <div class="business-icon">🏗️</div>
-              <div class="business-name"><h3>Jeffreys Bay Builders</h3><span class="business-category">Construction</span></div>
+              <div class="business-name"><h3>Jeffreys Bay Builders</h3><span class="badge badge-verified">🔵 KBF Verified</span> <span class="business-category">Construction</span></div>
             </div>
             <div class="business-location"><span>📍</span> Jeffreys Bay</div>
             <p class="business-description">Professional residential and commercial builders with 25+ years of experience. Specializing in renovations, extensions, and new builds.</p>
@@ -115,7 +162,7 @@
           <article class="business-card" data-category="retail" data-location="humansdorp">
             <div class="business-header">
               <div class="business-icon">🛍️</div>
-              <div class="business-name"><h3>Humansdorp Gift Shop</h3><span class="business-category">Retail</span></div>
+              <div class="business-name"><h3>Humansdorp Gift Shop</h3><span class="badge badge-verified">🔵 KBF Verified</span> <span class="business-category">Retail</span></div>
             </div>
             <div class="business-location"><span>📍</span> Humansdorp</div>
             <p class="business-description">Handcrafted gifts, local art, and souvenirs. Supporting local artisans with unique products you won't find anywhere else.</p>
@@ -127,7 +174,7 @@
           <article class="business-card" data-category="tourism" data-location="st-francis-bay">
             <div class="business-header">
               <div class="business-icon">🏖️</div>
-              <div class="business-name"><h3>St. Francis Bay Adventures</h3><span class="business-category">Tourism</span></div>
+              <div class="business-name"><h3>St. Francis Bay Adventures</h3><span class="badge badge-verified">🔵 KBF Verified</span> <span class="business-category">Tourism</span></div>
             </div>
             <div class="business-location"><span>📍</span> St. Francis Bay</div>
             <p class="business-description">Guided boat tours, kayaking, and surfing lessons. Experience the beautiful coastline with expert local guides.</p>
@@ -139,7 +186,7 @@
           <article class="business-card" data-category="agriculture" data-location="hankey">
             <div class="business-header">
               <div class="business-icon">🌾</div>
-              <div class="business-name"><h3>Hankey Wool & Grain</h3><span class="business-category">Agriculture</span></div>
+              <div class="business-name"><h3>Hankey Wool & Grain</h3><span class="badge badge-basic">⚪ Basic</span> <span class="business-category">Agriculture</span></div>
             </div>
             <div class="business-location"><span>📍</span> Hankey</div>
             <p class="business-description">Family-owned sheep and grain farm. We supply quality wool and organic grains to local markets and export markets.</p>
