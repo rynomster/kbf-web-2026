@@ -1,5 +1,227 @@
 {
-  "lastUpdated": "2026-03-30T00:00:00.000Z",
-  "source": "https://kougabusinessforum.com/rss",
-  "events": []
+  "lastUpdated": "2026-03-30T18:03:52.811Z",
+  "source": "https://9ty9.co.za/event/feed/",
+  "count": 50,
+  "events": [
+    {
+      "title": "JJ Pieterse at  The Backyard Beer Garden in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/jj-pieterse/",
+      "guid": "https://9ty9.co.za/events/jj-pieterse/",
+      "pubDate": "Tue, 31 Mar 2026 16:00:00 +0000",
+      "dateStr": "2026-03-31",
+      "day": "31",
+      "month": "MAR",
+      "description": "Tue, 31 March 2026 - 18:00 - 21:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/JJ-31April2026.jpg"
+    },
+    {
+      "title": "Curry &amp; Quiz Night at  St Francis Links in St Francis Bay",
+      "link": "https://9ty9.co.za/events/curry-quiz-night-2026-03-31/",
+      "guid": "https://9ty9.co.za/events/curry-quiz-night-2026-03-31/",
+      "pubDate": "Tue, 31 Mar 2026 17:00:00 +0000",
+      "dateStr": "2026-03-31",
+      "day": "31",
+      "month": "MAR",
+      "description": "Tue, 31 March 2026 - 19:00 - 21:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/CurryQuiz-28July2026.jpg"
+    },
+    {
+      "title": "Pilates Classes at  Arthur Fennell Hall in Aston Bay",
+      "link": "https://9ty9.co.za/events/pilates-classes-2026-04-01/",
+      "guid": "https://9ty9.co.za/events/pilates-classes-2026-04-01/",
+      "pubDate": "Wed, 01 Apr 2026 06:00:00 +0000",
+      "dateStr": "2026-04-01",
+      "day": "01",
+      "month": "APR",
+      "description": "Wed, 1 April 2026 - 08:00 - 09:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Pilates-Classes-Dec2026.jpg"
+    },
+    {
+      "title": "Friends of the Library Bookstore at  Newton Community Hall in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/friends-of-the-library-bookstore-2026-02-04-2026-02-06-2026-02-11-2026-02-13-2026-02-18-2026-02-20-2026-02-25-2026-02-27-2026-03-04-2026-03-06-2026-03-11-2026-03-13-2026-03-18-2026-03-20-27-2026-04-01/",
+      "guid": "https://9ty9.co.za/events/friends-of-the-library-bookstore-2026-02-04-2026-02-06-2026-02-11-2026-02-13-2026-02-18-2026-02-20-2026-02-25-2026-02-27-2026-03-04-2026-03-06-2026-03-11-2026-03-13-2026-03-18-2026-03-20-27-2026-04-01/",
+      "pubDate": "Wed, 01 Apr 2026 07:00:00 +0000",
+      "dateStr": "2026-04-01",
+      "day": "01",
+      "month": "APR",
+      "description": "Wed, 1 April 2026 - 09:00 - 12:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Friends-of-the-Library.jpg"
+    },
+    {
+      "title": "Jacobus Silver at  De Viswijf in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/jacobus-silver/",
+      "guid": "https://9ty9.co.za/events/jacobus-silver/",
+      "pubDate": "Wed, 01 Apr 2026 15:30:00 +0000",
+      "dateStr": "2026-04-01",
+      "day": "01",
+      "month": "APR",
+      "description": "Wed, 1 April 2026 - 17:30 - 21:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Jacobus-Silver-1April2026.jpg"
+    },
+    {
+      "title": "Ocean Vibes at  The Backyard Beer Garden in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/ocean-vibes/",
+      "guid": "https://9ty9.co.za/events/ocean-vibes/",
+      "pubDate": "Wed, 01 Apr 2026 16:00:00 +0000",
+      "dateStr": "2026-04-01",
+      "day": "01",
+      "month": "APR",
+      "description": "Wed, 1 April 2026 - 18:00 - 21:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Ocean-Vibes-1April2026.jpg"
+    },
+    {
+      "title": "SANBS Blood Donation Clinic at  Fountains Mall in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/sanbs-blood-donation-clinic-2026-03-06-2026-03-28-2026-04-02/",
+      "guid": "https://9ty9.co.za/events/sanbs-blood-donation-clinic-2026-03-06-2026-03-28-2026-04-02/",
+      "pubDate": "Thu, 02 Apr 2026 09:00:00 +0000",
+      "dateStr": "2026-04-02",
+      "day": "02",
+      "month": "APR",
+      "description": "Thu, 2 April 2026 - 11:00 - 16:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/SANBS-Blood-Donation-Clinic-28April2026.jpg"
+    },
+    {
+      "title": "Acoustic Night at  The Backyard Beer Garden in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/acoustic-night-2026-04-02/",
+      "guid": "https://9ty9.co.za/events/acoustic-night-2026-04-02/",
+      "pubDate": "Thu, 02 Apr 2026 16:00:00 +0000",
+      "dateStr": "2026-04-02",
+      "day": "02",
+      "month": "APR",
+      "description": "Thu, 2 April 2026 - 18:00 - 21:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Backyard-Acoustic-Night.jpg"
+    },
+    {
+      "title": "Splash Festival at  Kings Beach in Nelson Mandela Bay",
+      "link": "https://9ty9.co.za/events/splash-festival/",
+      "guid": "https://9ty9.co.za/events/splash-festival/",
+      "pubDate": "Thu, 02 Apr 2026 22:00:00 +0000",
+      "dateStr": "2026-04-02",
+      "day": "02",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - Sun, 5 April 2026 - All Day",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/SpashFestival-5April2026.jpg"
+    },
+    {
+      "title": "Trans Kouga Wilderness Overlanding Tour | 3–11 April 2026 at  Baviaanskloof in Baviaanskloof",
+      "link": "https://9ty9.co.za/events/trans-kouga-wilderness-overlanding-tour-3-11-april-2026/",
+      "guid": "https://9ty9.co.za/events/trans-kouga-wilderness-overlanding-tour-3-11-april-2026/",
+      "pubDate": "Thu, 02 Apr 2026 22:00:00 +0000",
+      "dateStr": "2026-04-02",
+      "day": "02",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - Sat, 11 April 2026 - All Day",
+      "image": "https://9ty9.co.za/wp-content/uploads/2025/11/Trans-Kouga-Wilderness-Overlanding-Tour-1.jpg"
+    },
+    {
+      "title": "Rip Curl Gromsearch presented by Sea Harvest &amp; supported by the Royal St Andrews Hotel at   in",
+      "link": "https://9ty9.co.za/events/rip-curl-gromsearch-presented-by-sea-harvest-supported-by-the-royal-st-andrews-hotel/",
+      "guid": "https://9ty9.co.za/events/rip-curl-gromsearch-presented-by-sea-harvest-supported-by-the-royal-st-andrews-hotel/",
+      "pubDate": "Fri, 03 Apr 2026 06:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - Mon, 6 April 2026 - 08:00 - 17:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Surfing-South-Africa-2.png"
+    },
+    {
+      "title": "Royal St Andrew’s Hotel Rip Curl Cup at   in",
+      "link": "https://9ty9.co.za/events/royal-st-andrews-hotel-rip-curl-cup/",
+      "guid": "https://9ty9.co.za/events/royal-st-andrews-hotel-rip-curl-cup/",
+      "pubDate": "Fri, 03 Apr 2026 06:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - Mon, 6 April 2026 - 08:00 - 17:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Surfing-South-Africa-3.png"
+    },
+    {
+      "title": "Friends of the Library Bookstore at  Newton Community Hall in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/friends-of-the-library-bookstore-2026-02-04-2026-02-06-2026-02-11-2026-02-13-2026-02-18-2026-02-20-2026-02-25-2026-02-27-2026-03-04-2026-03-06-2026-03-11-2026-03-13-2026-03-18-2026-03-20-01-2026-04-03/",
+      "guid": "https://9ty9.co.za/events/friends-of-the-library-bookstore-2026-02-04-2026-02-06-2026-02-11-2026-02-13-2026-02-18-2026-02-20-2026-02-25-2026-02-27-2026-03-04-2026-03-06-2026-03-11-2026-03-13-2026-03-18-2026-03-20-01-2026-04-03/",
+      "pubDate": "Fri, 03 Apr 2026 07:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - 09:00 - 12:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Friends-of-the-Library.jpg"
+    },
+    {
+      "title": "Market Day at Suikerbossie at  Suikerbossie in Kabeljous",
+      "link": "https://9ty9.co.za/events/market-day-at-suikerbossie-2026-04-03/",
+      "guid": "https://9ty9.co.za/events/market-day-at-suikerbossie-2026-04-03/",
+      "pubDate": "Fri, 03 Apr 2026 08:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - 10:00 - 15:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Market-at-Suikerbossie-6April2026.jpg"
+    },
+    {
+      "title": "Easter Egg Hunt at  Suikerbossie in Kabeljous",
+      "link": "https://9ty9.co.za/events/easter-egg-hunt/",
+      "guid": "https://9ty9.co.za/events/easter-egg-hunt/",
+      "pubDate": "Fri, 03 Apr 2026 09:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - 11:00 - 12:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Easter-Egg-Hunt-3April2026.jpeg"
+    },
+    {
+      "title": "What&#039;s Good In The Hood at  What&#039;s Good In The Hood in Gqeberha",
+      "link": "https://9ty9.co.za/events/whats-good-in-the-hood-2026-02-06-2026-02-27-2026-03-06-2026-03-27-2026-04-03/",
+      "guid": "https://9ty9.co.za/events/whats-good-in-the-hood-2026-02-06-2026-02-27-2026-03-06-2026-03-27-2026-04-03/",
+      "pubDate": "Fri, 03 Apr 2026 15:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - 17:00 - 21:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Whats-Good-In-The-Hood-31Dec2026.jpg"
+    },
+    {
+      "title": "Just Us at  The Backyard Beer Garden in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/just-us/",
+      "guid": "https://9ty9.co.za/events/just-us/",
+      "pubDate": "Fri, 03 Apr 2026 16:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - 18:00 - 21:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Just-Us-3April2026.jpg"
+    },
+    {
+      "title": "Black River Gypsy at  Grand Prix  Sports Bar in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/black-river-gypsy-2026-03-27-2026-04-03/",
+      "guid": "https://9ty9.co.za/events/black-river-gypsy-2026-03-27-2026-04-03/",
+      "pubDate": "Fri, 03 Apr 2026 17:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - 19:00 - 21:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/BRG-1May2026.jpg"
+    },
+    {
+      "title": "Steve Graham’s MONSTERS OF ROCK at  St Francis Links in St Francis Bay",
+      "link": "https://9ty9.co.za/events/steve-grahams-monsters-of-rock/",
+      "guid": "https://9ty9.co.za/events/steve-grahams-monsters-of-rock/",
+      "pubDate": "Fri, 03 Apr 2026 18:00:00 +0000",
+      "dateStr": "2026-04-03",
+      "day": "03",
+      "month": "APR",
+      "description": "Fri, 3 April 2026 - 20:00 - 22:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Steve-Graham-3April2026.jpg"
+    },
+    {
+      "title": "Mentors Country Estate Parkrun at  Mentors Country Estate in Jeffreys Bay",
+      "link": "https://9ty9.co.za/events/mentors-country-estate-parkrun-2-2026-02-14-2026-02-21-2026-02-28-2026-03-07-2026-03-14-2026-03-21-2026-03-28-2026-04-04/",
+      "guid": "https://9ty9.co.za/events/mentors-country-estate-parkrun-2-2026-02-14-2026-02-21-2026-02-28-2026-03-07-2026-03-14-2026-03-21-2026-03-28-2026-04-04/",
+      "pubDate": "Sat, 04 Apr 2026 06:00:00 +0000",
+      "dateStr": "2026-04-04",
+      "day": "04",
+      "month": "APR",
+      "description": "Sat, 4 April 2026 - 08:00 - 09:00",
+      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Mentors-Country-Estate-Parkrun.jpg"
+    }
+  ]
 }
