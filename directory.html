@@ -23,11 +23,11 @@
     .filter-btn.active { background: #e94560; border-color: #e94560; color: white; }
     .directory-content { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
     .directory-results { margin-top: 2rem; }
-    .result-count { color: #a0a0a0; margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .result-count { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
     .empty-state { text-align: center; padding: 4rem 2rem; background: white; border-radius: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); }
     .empty-state-icon { font-size: 4rem; margin-bottom: 1rem; opacity: 0.5; }
     .empty-state h3 { color: #1a1a2e; margin-bottom: 0.5rem; }
-    .empty-state p { color: #a0a0a0; margin-bottom: 1.5rem; }
+    .empty-state p { color: var(--text-muted); margin-bottom: 1.5rem; }
     .business-card { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; }
     .business-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); transform: scaleX(0); transition: transform 0.3s ease; }
     .business-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16); }
@@ -37,7 +37,7 @@
     .business-name h3 { color: #1a1a2e; margin: 0 0 0.25rem 0; font-size: 1.3rem; }
     .business-category { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.35rem 0.75rem; background: rgba(14, 121, 150, 0.1); color: #0e7996; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
     .business-category::before { content: '•'; font-size: 1rem; }
-    .business-location { color: #a0a0a0; font-size: 0.9rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .business-location { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
     .business-description { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; }
     .business-contact { display: flex; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(0, 0, 0, 0.05); }
     .contact-item { display: flex; align-items: center; gap: 0.5rem; color: #0e7996; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: gap 0.2s ease; }
@@ -268,7 +268,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h4>Kouga Business Forum</h4>
-          <p style="color: #a0a0a0;">Connecting Kouga businesses, building opportunities together.</p>
+          <p style="color: var(--text-muted);">Connecting Kouga businesses, building opportunities together.</p>
         </div>
         <div class="footer-section">
           <h4>Quick Links</h4>

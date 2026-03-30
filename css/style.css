@@ -1,28 +1,13 @@
-/* ============================
-   COLOR SYSTEM - MOCKUP MATCHING
-   ============================ */
+/* KBF Website - Modern Redesign CSS */
 
 :root {
-  /* Mockup Colors */
+  /* Mockup Colors - Consolidated */
   --primary-dark: #1a1a2e;
   --primary: #16213e;
   --primary-light: #0f3460;
   --accent-cyan: #06c8ff;
   --accent-teal: #0e7996;
   --accent-gradient: linear-gradient(135deg, #06c8ff 0%, #0e7996 100%);
-  --white: #ffffff;
-  --bg-light: #f8f9fa;
-  --text-dark: #1a1a2e;
-  --text-muted: #a0a0a0;
-}
-
-/* KBF Website - Modern Redesign CSS */
-
-:root {
-  /* Modern Color Palette */
-  --primary-dark: #1a1a2e;
-  --primary: #16213e;
-  --primary-light: #0f3460;
   --accent: #06c8ff;
   --accent-light: #ff6b6b;
   --secondary: #533483;
@@ -32,6 +17,23 @@
   --bg-light: #f8f9fa;
   --bg-white: #ffffff;
   --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  --shadow-hover: 0 12px 24px rgba(6, 200, 255, 0.2);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -1201,4 +1203,157 @@ p {
     align-items: center;
     justify-content: center;
   }
+}
+
+/* ============================
+   SHARED PAGE COMPONENTS
+   ============================ */
+
+/* Page Hero */
+.page-hero {
+  background: var(--bg-gradient);
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: var(--text-dark);
+}
+
+.stat-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Contact Cards */
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-gradient);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contact-info h4 {
+  margin-bottom: 0.25rem;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Form Improvements */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Border Top */
+.border-top {
+  border-top: 1px solid var(--border-color);
+}
+
+/* Text Center */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* Background Light */
+.bg-light {
+  background: var(--bg-light);
+}
+
+/* Padding utilities */
+.py-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
