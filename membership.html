@@ -28,8 +28,8 @@
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="membership.html">Membership</a>
         <a href="directory.html">Directory</a>
+        <a href="membership.html">Membership</a>
         <a href="submit.html">Submit</a>
         <a href="kbevents.html">KBF Events</a>
         <a href="events.html">Community</a>
@@ -48,8 +48,9 @@
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
         
         <!-- Annual Membership -->
-        <div class="card" style="text-align: center; padding: 2rem;">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+        <div class="card" style="text-align: center; padding: 2rem; position: relative;">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-cyan); color: white; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Most Popular</div>
+          <div style="font-size: 3rem; margin-bottom: 1rem; margin-top: 1rem;">📅</div>
           <h2 style="color: var(--accent-cyan);">Annual Membership</h2>
           <div style="font-size: 3rem; font-weight: 800; margin: 1.5rem 0;">
             R1,200
@@ -63,19 +64,31 @@
             <li style="padding: 0.5rem 0;">✓ Networking events access</li>
             <li style="padding: 0.5rem 0;">✓ Newsletter subscription</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; padding: 1rem;">Join Now</a>
+          
+          <!-- PayFast Annual Form -->
+          <form name="PayFastAnnualForm" action="https://payment.payfast.io/eng/process" method="post" style="margin-top: 1.5rem;">
+            <input type="hidden" name="cmd" value="_paynow">
+            <input type="hidden" name="receiver" pattern="[0-9]" value="20345535">
+            <input type="hidden" name="return_url" value="https://new.kougabusinessforum.com/thank-you.html">
+            <input type="hidden" name="cancel_url" value="https://new.kougabusinessforum.com/membership.html">
+            <input type="hidden" name="amount" value="1200">
+            <input type="hidden" name="item_name" value="KBF - Annual Membership 2026">
+            <input type="hidden" name="item_description" value="Valid for the 2026 membership year.">
+            <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+              <img src="https://my.payfast.io/images/buttons/PayNow/Primary-Large-PayNow.png" alt="Pay Annual Membership - 2026" title="Pay Annual Membership - 2026" style="width: 100%; max-width: 200px;">
+            </button>
+          </form>
         </div>
 
         <!-- Monthly Membership -->
         <div class="card" style="text-align: center; padding: 2rem; border: 2px solid var(--accent-cyan);">
-          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-cyan); color: white; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">POPULAR</div>
           <div style="font-size: 3rem; margin-bottom: 1rem;">📆</div>
           <h2 style="color: var(--accent-cyan);">Monthly Membership</h2>
-          <div style="font-size: 2rem; font-weight: 800; margin: 1.5rem 0;">
+          <div style="font-size: 1rem; color: var(--text-muted); margin-bottom: 0.5rem;">R200 once-off registration</div>
+          <div style="font-size: 2rem; font-weight: 800; margin: 1rem 0;">
             R100
             <span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/month</span>
           </div>
-          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">+ R200 once-off registration</p>
           <ul style="list-style: none; text-align: left; padding: 0 1rem;">
             <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">✓ Subscription via PayFast</li>
             <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">✓ Valid for 2026 calendar year</li>
@@ -84,7 +97,24 @@
             <li style="padding: 0.5rem 0;">✓ Business directory listing</li>
             <li style="padding: 0.5rem 0;">✓ Networking events access</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; padding: 1rem;">Start Subscription</a>
+          
+          <!-- PayFast Monthly Form -->
+          <form name="PayFastMonthlyForm" action="https://payment.payfast.io/eng/process" method="post" style="margin-top: 1.5rem;">
+            <input type="hidden" name="cmd" value="_paynow">
+            <input type="hidden" name="receiver" pattern="[0-9]" value="20345535">
+            <input type="hidden" name="return_url" value="https://new.kougabusinessforum.com/thank-you.html">
+            <input type="hidden" name="cancel_url" value="https://new.kougabusinessforum.com/membership.html">
+            <input type="hidden" name="amount" value="200">
+            <input type="hidden" name="item_name" value="KBF - Monthly Membership 2026">
+            <input type="hidden" name="item_description" value="Valid for the 2026 membership year.">
+            <input type="hidden" name="subscription_type" value="1">
+            <input type="hidden" name="recurring_amount" value="100">
+            <input type="hidden" name="cycles" value="0">
+            <input type="hidden" name="frequency" value="3">
+            <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+              <img src="https://my.payfast.io/images/buttons/Subscribe/Primary-Large-Subscribe.png" alt="Subscribe" title="Start Monthly Membership - 2026" style="width: 100%; max-width: 200px;">
+            </button>
+          </form>
         </div>
 
       </div>
@@ -131,15 +161,15 @@
         </div>
 
         <div class="card" style="text-align: center;">
-          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📚</div>
-          <h3>Resources</h3>
-          <p style="color: var(--text-muted);">Access business resources, templates, and industry insights to help your business grow.</p>
-        </div>
-
-        <div class="card" style="text-align: center;">
           <div style="font-size: 2.5rem; margin-bottom: 1rem;">💼</div>
           <h3>Advocacy</h3>
           <p style="color: var(--text-muted);">Your voice matters. KBF advocates for business-friendly policies in the Kouga region.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📚</div>
+          <h3>Resources</h3>
+          <p style="color: var(--text-muted);">Access business resources, templates, and industry insights.</p>
         </div>
 
         <div class="card" style="text-align: center;">
