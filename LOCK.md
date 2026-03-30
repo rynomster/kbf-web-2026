@@ -10,8 +10,18 @@ This file prevents concurrent work on the same tasks by multiple agents or sub-a
 
 | Task ID | Lock Holder | Started | Est. Duration | Status | Notes |
 |---------|-------------|---------|---------------|--------|-------|
-| T2 | Main Agent | 2026-03-30 10:30 UTC | ~2h | Active | Component mapping |
-| - | - | - | - | - | - |
+| - | None | - | - | - | All tasks currently available |
+
+---
+
+## Recent Completions
+
+| Task ID | Holder | Completed | Summary |
+|---------|--------|-----------|---------|
+| T1-T8 | Main Agent | 2026-03-30 15:30 UTC | Sprint 3 complete - Homepage redesign, committee section, CSS logo |
+| T2 | Main Agent | 2026-03-30 14:00 UTC | Component mapping from mockup |
+| T3 | Main Agent | 2026-03-30 13:00 UTC | New CSS architecture |
+| T4-T6 | Main Agent | 2026-03-30 11:00 UTC | Homepage redesign |
 
 ---
 
@@ -29,12 +39,12 @@ This file prevents concurrent work on the same tasks by multiple agents or sub-a
 
 **Complete the task:**
 ```
-[Task ID] | Main Agent | 2026-03-30 10:30 UTC | ~2h | ✅ Complete | [Summary of changes]
+| T# | Agent | YYYY-MM-DD HH:MM UTC | ~Xh | ✅ Complete | [Summary]
 ```
 
 **Release early (before completion):**
 ```
-[Task ID] | Main Agent | 2026-03-30 10:30 UTC | ~2h | 🔄 Released | [Reason + Next owner]
+| T# | Agent | YYYY-MM-DD HH:MM UTC | ~Xh | 🔄 Released | [Reason]
 ```
 
 ---
@@ -43,9 +53,9 @@ This file prevents concurrent work on the same tasks by multiple agents or sub-a
 
 | Scenario | Resolution |
 |----------|------------|
-| **Double-lock** | The later agent must wait or choose a different task | Check TODO.md for context | If urgent, notify the current holder |
-| **Lost lock** | Re-acquire the task before starting | Document the loss reason | Notify the team | If urgent, notify the current holder |
-| **Task blocked** | Mark as blocked and wait | Document the blocker | Notify the blocking agent | Notify the team |
+| **Double-lock** | Later agent must wait or choose different task |
+| **Lost lock** | Re-acquire task before starting, document loss reason |
+| **Task blocked** | Mark as blocked, document blocker, notify team |
 
 ---
 
@@ -55,8 +65,8 @@ This file prevents concurrent work on the same tasks by multiple agents or sub-a
 
 1. ✅ Check if task is already locked
 2. ✅ Review TODO.md for context and dependencies
-3. ✅ Confirm the task is appropriate for your role
-4. ✅ Check if any prerequisites are pending
+3. ✅ Confirm task is appropriate for your role
+4. ✅ Check if prerequisites are pending
 
 ### While Working
 
@@ -73,42 +83,34 @@ This file prevents concurrent work on the same tasks by multiple agents or sub-a
 
 ---
 
-## Sub-Agent Roles
-
-| Role | Responsibilities | Lock Limit |
-|------|------------------|------------|
-| **Coder** | HTML/CSS/JS implementation | 2 tasks |
-| **Designer** | Visual design, color schemes | 1 task |
-| **Researcher** | Gather content, analyze refs | 1 task |
-| **Reviewer** | Quality assurance, testing | 1 task |
-| **Coordinator** | Task management, sync | None |
-
----
-
 ## Quick Reference
 
-**Claim a task:**
-```markdown
-| T2 | Main Agent | 2026-03-30 10:30 UTC | ~2h | 🔄 Active | Component mapping - Reference site analysis
-```
+**Available Tasks:**
 
-**Release a task:**
-```markdown
-| T2 | Main Agent | 2026-03-30 10:30 UTC | ~2h | ✅ Complete | Mapped 5 key components, created design spec
-```
-
-**Block a task:**
-```markdown
-| T2 | Main Agent | 2026-03-30 10:30 UTC | ~2h | 🔒 Blocked | Waiting on design assets
-```
+| Task | Description | Priority |
+|------|-------------|----------|
+| P1 | RSS Feed Sync Testing | Medium |
+| P2 | Form Backend Integration | High |
+| P3 | Business Directory Page | High |
+| P4 | About Us Page | Medium |
+| P5 | Contact Page | Medium |
+| P6 | Image Optimization | Low |
 
 ---
 
 ## Emergency Override
 
-In case of emergencies (server down, critical bug), use this protocol:
+In case of emergencies (server down, critical bug):
 
 1. Mark task as `🔴 Emergency` in Active Locks
 2. Add emergency context in Notes
-3. Notify all team members
+3. Notify all team members immediately
 4. Revert lock after resolution
+
+---
+
+## Last Updated
+
+**2026-03-30 15:35 UTC** - All locks cleared, Sprint 3 complete
+
+**Maintained by:** Jock (Main Agent)

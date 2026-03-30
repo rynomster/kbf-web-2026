@@ -1,161 +1,161 @@
 # Kouga Business Forum Website
 
-A lightweight, fast, and fully responsive website built with pure HTML5, CSS3, and Vanilla JavaScript for the Kouga Business Forum.
+A lightweight, fast, and fully responsive website built with pure HTML5, CSS3, and Vanilla JavaScript for the Kouga Business Forum (KBF).
 
 ## 🚀 Features
 
-- **Fully Responsive:** Works seamlessly on desktop, tablet, and mobile devices
-- **Fast & Lightweight:** No external dependencies, zero bloat
-- **Accessible:** Semantic HTML5 structure
-- **SEO-Ready:** Meta tags, proper headings, and semantic markup
-- **Interactive:** Smooth scrolling, filterable directory, responsive forms
+- **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile devices
+- **Fast & Lightweight** - No external dependencies, zero bloat
+- **Modern Design** - CSS-based logo with gradient, cyan accent colors
+- **Committee Section** - All 10 committee members with photos
+- **Interactive** - Smooth scrolling, filterable directory, responsive forms
+- **RSS Integration** - Events synced from 9ty9.co.za feed
+- **GitHub Actions** - Automated RSS sync and deployments
+
+## 🌐 Live Site
+
+**https://rynomster.particl.io/kbf-web-2026/**
 
 ## 📁 Project Structure
 
 ```
 kouga-business-forum/
-├── index.html          # Main page
+├── index.html              # Main homepage
 ├── css/
-│   └── style.css       # All styles
+│   ├── style.css          # Main styles
+│   └── logo.css           # CSS-based logo styles
 ├── js/
-│   └── main.js         # Interactive functionality
-├── events.json         # Events data (auto-synced via GitHub Actions)
-├── news.json           # News articles (auto-synced via GitHub Actions)
-├── README.md           # This file
+│   └── main.js           # Interactive functionality
+├── images/               # All images and photos
+│   ├── KBF-LOGO.png
+│   ├── Vice-chair-Lieb-Swiegers.jpg
+│   ├── Johannes-Barnard.jpg
+│   └── ... (10 committee member photos)
+├── events.json           # Events data (auto-synced)
+├── news.json             # News articles (auto-synced)
+├── README.md             # This file
+├── TODO.md               # Task tracking
+├── LOCK.md               # Task locking
+├── AGENTS.md             # Team collaboration
+├── CNAME                 # Custom domain config
 ├── .github/
 │   └── workflows/
-│       └── rss-sync.yml # RSS feed sync workflow
-├── .gitignore
-└── package.json        # Node.js dependencies (for GitHub Actions)
+│       └── rss-sync.yml  # RSS feed sync workflow
+└── .gitignore
 ```
+
+## 🎨 Design System
+
+### Color Palette
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Primary Dark | `#1a1a2e` | Header, footer |
+| Primary | `#16213e` | Backgrounds |
+| Accent Cyan | `#06c8ff` | Buttons, links, logo |
+| Accent Teal | `#0e7996` | Secondary accents |
+| White | `#ffffff` | Text on dark |
+| Light Gray | `#f8f9fa` | Section backgrounds |
+
+### Typography
+
+- **Font Family:** Inter (Google Fonts)
+- **Headings:** 700-800 weight, -0.02em letter-spacing
+- **Body:** 400-500 weight, 1.6-1.7 line-height
+
+### Components
+
+- **Cards** - White background, shadow, hover lift effect
+- **Buttons** - Gradient backgrounds, rounded-full, shadow
+- **Navigation** - Fixed header, smooth hover transitions
+- **Forms** - Clean inputs with focus states
 
 ## 🔄 RSS Feed Integration
 
-The RSS feed sync is handled by a GitHub Actions workflow located in `.github/workflows/rss-sync.yml` that:
-1. Fetches the KBF RSS feed
-2. Parses the events and news articles
-3. Generates static `events.json` and `news.json` files
-4. Commits the files to the repository
+The RSS feed sync is handled by GitHub Actions (`.github/workflows/rss-sync.yml`):
+1. Fetches events from `https://9ty9.co.za/event/feed/`
+2. Parses Atom feed format
+3. Generates static `events.json` file
+4. Commits the files to repository
 
 **To enable automatic sync:**
+1. The workflow can be triggered manually via GitHub Actions
+2. Or uncomment the schedule line in `rss-sync.yml` for daily runs
 
-1. Set the RSS secret key in your repository secrets:
-   - Go to Settings → Secrets and variables → Actions
-   - Create a new secret named `RSS_SECRET_KEY`
-   - Paste your secret key
+## 👥 Committee Members
 
-2. Uncomment the schedule line in `rss-sync.yml`:
-   ```yaml
-   schedule:
-     - cron: '0 0 * * *'  # Daily at midnight UTC
-   ```
+1. **Lieb Swiegers** - Chairman
+2. **Johannes Barnard** - Vice-Chair & Treasurer
+3. **Dries du Preez** - Executive Committee Member
+4. **Gerhard Wilsnacht** - Committee Member
+5. **Waldo van Niekerk** - Committee Member
+6. **Frank Harpur** - Committee Member
+7. **Susan Lottering** - Committee Member
+8. **Ryno Matthee** - Committee Member
+9. **Jaco Bothma** - Committee Member
+10. **Fred Kemp** - Committee Member
 
-The workflow can also be triggered manually via the GitHub Actions dropdown menu.
+## 📱 Sections
 
-## 🎨 Design
+- **Hero** - Gradient background, headline, CTA buttons
+- **Quick Access** - 4-icon grid navigation
+- **Features** - 6 benefit cards with numbered indicators
+- **Committee** - Photo grid with roles
+- **Gallery** - 6-image grid with overlays
+- **Directory** - 6 category cards
+- **Events** - 3 event cards with date badges
+- **Join** - Membership form
+- **Footer** - 4-column layout with regions
 
-The design features the KBF coastal color palette:
-- Primary Blue: `#1a5f7a`
-- Secondary Blue: `#2c7893`
-- Sand Beige: `#f4e4c1`
-- Sand Light: `#fff8f0`
-- Green: `#5c8d6a`
-
-## 📦 Getting Started
+## 🛠️ Development
 
 ### Local Development
 
-1. Simply open `index.html` in your browser
-2. No build process or server required!
+1. Clone the repository
+2. Open `index.html` in browser
+3. No build process or server required!
 
-### Build for Production
+### Push to GitHub
 
 ```bash
-# No build needed - just deploy the files as-is
+git add .
+git commit -m "Your message"
+git push origin main
 ```
 
 ## 🌐 Hosting
 
-### GitHub Pages (Recommended)
+### GitHub Pages
 
-1. Create a repository on GitHub
-2. Push the folder contents
-3. Enable GitHub Pages in Settings → Pages
-4. Your site will be live at: `https://<username>.github.io/kouga-business-forum/`
+Site deployed at: `https://rynomster.particl.io/kbf-web-2026/`
 
-### Cloudflare Pages
+### Custom Domain
 
-1. Sign in to Cloudflare Dashboard
-2. Create a new Pages project
-3. Connect your GitHub repository
-4. Deploy!
-
-## 📝 Adding Members
-
-Edit `js/main.js` and modify the `sampleMembers` array:
-
-```javascript
-const sampleMembers = [
-  {
-    name: "Your Business",
-    category: "construction",
-    location: "jeffreys-bay",
-    logo: "🏗️"
-  },
-  // ... more members
-];
-```
-
-Categories:
-- `construction`
-- `retail`
-- `tourism`
-- `services`
-- `agriculture`
-
-Locations:
-- `jeffreys-bay`
-- `humansdorp`
-- `st-francis`
-- `hankey`
-- `patensie`
-- `loerie`
-
-## 🔄 RSS Feed Integration
-
-The RSS feed sync is handled by a GitHub Actions workflow that:
-1. Fetches the KBF RSS feed
-2. Parses the events
-3. Generates a static `events.json` file
-4. Commits the file to the repository
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
-
-## 🛠️ Development
-
-All JavaScript is contained in `js/main.js` with:
-- Directory filtering
-- Form handling
-- Smooth scrolling
-- Responsive event listeners
+CNAME file contains: `kbf-web-2026`
 
 ## 📞 Contact
 
-Kouga Business Forum
+**Kouga Business Forum**
 - Email: office@kougabusinessforum.com
 - Phone: 084 681 3702
-- Address: Jeffreys Bay, South Africa
+- Mobile: 063 902 1597
+- Location: Jeffreys Bay, Kouga Region
+
+**Regions Served:**
+- Jeffreys Bay
+- Humansdorp
+- St. Francis Bay
+- Hankey
+- Patensie
+- Loerie
+- Thornhill
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+Open source - MIT License
 
 ---
 
-Built with ❤️ for the Kouga Community
+Built with ❤️ for the Kouga Business Community
+
+**Last Updated:** 2026-03-30

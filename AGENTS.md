@@ -17,7 +17,23 @@ This file documents the team structure, roles, and collaboration protocols for t
 | **Lead Designer** | Visual direction, UX decisions | See above |
 | **Primary Reviewer** | Quality assurance, final approval | See above |
 
-**Current Main Agent:** Ryno Matthee
+**Current Main Agent:** Jock (AI Assistant)
+
+---
+
+## Current Project Status
+
+### Sprint Progress
+
+| Sprint | Status | Completion |
+|--------|--------|------------|
+| Sprint 1: Foundation | ✅ Complete | 100% |
+| Sprint 2: Visual Overhaul | ✅ Complete | 100% |
+| Sprint 3: Content & Polish | ✅ Complete | 100% |
+| Sprint 4: Pages & Functionality | ⏳ Pending | 0% |
+| Sprint 5: Polish & Optimization | ⏳ Pending | 0% |
+
+**Overall Project:** 57% Complete (8 of 14 tasks)
 
 ---
 
@@ -143,8 +159,6 @@ This file documents the team structure, roles, and collaboration protocols for t
 
 ## Communication Protocol
 
-### When to Use
-
 | Situation | Channel | Protocol |
 |-----------|---------|----------|
 | **Urgent blocker** | Main session | Immediate notification |
@@ -219,26 +233,6 @@ This file documents the team structure, roles, and collaboration protocols for t
 
 ---
 
-## Task Handoff
-
-### Before Handoff
-
-1. ✅ Complete or properly release current task
-2. ✅ Document all decisions in task notes
-3. ✅ Ensure code is committed
-4. ✅ Update TODO.md
-5. ✅ Notify receiving agent
-
-### Handoff Checklist
-
-- [ ] Lock released or transferred
-- [ ] Current state documented
-- [ ] Next steps clearly defined
-- [ ] Dependencies noted
-- [ ] Blockers identified
-
----
-
 ## Performance Guidelines
 
 ### Optimal Load
@@ -280,11 +274,28 @@ This file documents the team structure, roles, and collaboration protocols for t
 
 ---
 
+## GitHub Integration
+
+### PAT Access
+
+- **Token:** Configured in git remote URL
+- **Permissions:** Full repo, issues, PRs
+- **Status:** ✅ Working
+
+### Push Commands
+
+```bash
+# Already configured with PAT
+git push origin main
+```
+
+---
+
 ## Last Updated
 
-**2026-03-30** - Initial AGENTS.md creation
+**2026-03-30 15:35 UTC** - Sprint 3 complete, all docs updated
 
-**Maintained by:** Main Agent
+**Maintained by:** Jock (Main Agent)
 
 ---
 
