@@ -1,4 +1,4 @@
-// KBF Website - Main JavaScript
+// KBF Website - Modern Redesign JavaScript
 
 // Configuration
 const RSS_FEED_URL = 'https://9ty9.co.za/event/feed/';
@@ -7,8 +7,10 @@ const RSS_FEED_URL = 'https://9ty9.co.za/event/feed/';
 document.addEventListener('DOMContentLoaded', function() {
   initializeNavigation();
   initializeForms();
+  initializeScrollAnimations();
   loadEvents();
   loadNews();
+  initializeMobileMenu();
 });
 
 // Navigation - Smooth Scrolling
@@ -22,7 +24,7 @@ function initializeNavigation() {
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
-        const headerOffset = 80;
+        const headerOffset = 100;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         
@@ -35,10 +37,82 @@ function initializeNavigation() {
   });
 }
 
+// Mobile Menu
+function initializeMobileMenu() {
+  const nav = document.querySelector('.nav');
+  const menuBtn = document.createElement('button');
+  
+  menuBtn.innerHTML = `
+    <span class="hamburger-icon"></span>
+    <span class="hamburger-icon"></span>
+    <span class="hamburger-icon"></span>
+  `;
+  
+  menuBtn.style.cssText = `
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    z-index: 1001;
+  `;
+  
+  const menu = document.createElement('div');
+  menu.innerHTML = `
+    <a href="#features">Features</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#events">Events</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="btn btn-primary">Join Now</a>
+  `;
+  menu.style.cssText = `
+    display: none;
+    position: fixed;
+    top: 72px;
+    right: var(--spacing-md);
+    background: var(--primary-dark);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    box-shadow: var(--shadow-xl);
+  `;
+  
+  menu.style.marginRight = 'var(--spacing-sm)';
+  
+  menuBtn.addEventListener('click', function() {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  });
+  
+  nav.appendChild(menuBtn);
+  nav.appendChild(menu);
+
+  // Show menu button on mobile
+  if (window.innerWidth <= 768) {
+    menuBtn.style.display = 'flex';
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+      menu.style.display = 'none';
+    }
+  });
+
+  // Close menu on resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  });
+}
+
 // Forms
 function initializeForms() {
   // Join Form
-  const joinForm = document.querySelector('.join-form');
+  const joinForm = document.getElementById('join-form');
   if (joinForm) {
     joinForm.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -50,13 +124,65 @@ function initializeForms() {
         data[key] = value;
       });
       
-      // Simulate submission
-      alert(`Thank you for your interest in joining KBF!\n\nYour application has been submitted. We will contact you at ${data.email} shortly.`);
+      // Simulate submission with animation
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
       
-      // Reset form
-      this.reset();
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        alert(`Thank you for your interest in joining KBF!\n\nYour application has been submitted. We will contact you at ${data.email} shortly.`);
+        
+        // Reset form
+        this.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 1500);
     });
   }
+
+  // Contact form links
+  const contactLinks = document.querySelectorAll('footer .footer-links a[href^="mailto:"]');
+  contactLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const mailto = this.href;
+      window.location.href = mailto;
+    });
+  });
+}
+
+// Scroll Animations
+function initializeScrollAnimations() {
+  const animatedElements = document.querySelectorAll('.card, .feature-card, .gallery-item');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        
+        if (animatedElements.length > 1) {
+          setTimeout(() => {
+            entry.target.style.transitionDelay = `${index * 50}ms`;
+          }, 0);
+        }
+        
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  animatedElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
 }
 
 // Load and display events from RSS feed
@@ -73,14 +199,9 @@ async function loadEvents() {
     
     if (events && events.length > 0) {
       displayEvents(events);
-    } else {
-      displayPlaceholder('events-container', 'No events found. Check back later or add some demo events.');
     }
   } catch (error) {
     console.log('Using demo events:', error.message);
-    displayPlaceholder('events-container', 'Events sync temporarily unavailable. Using demo events.');
-    
-    // Show demo events
     displayDemoEvents();
   }
 }
@@ -99,15 +220,9 @@ async function loadNews() {
     
     if (articles && articles.length > 0) {
       displayNews(articles);
-    } else {
-      displayPlaceholder('news-container', 'No news found. Check back later.');
     }
   } catch (error) {
     console.log('Using demo news:', error.message);
-    displayPlaceholder('news-container', 'News sync temporarily unavailable. Using demo content.');
-    
-    // Show demo news
-    displayDemoNews();
   }
 }
 
@@ -131,66 +246,7 @@ function parseAtomFeed(feedData) {
   return results;
 }
 
-// Display events
-function displayEvents(events) {
-  const container = document.getElementById('events-container');
-  if (!container) return;
-  
-  // Remove placeholder if exists
-  container.querySelectorAll('.placeholder').forEach(el => el.remove());
-  
-  events.slice(0, 6).forEach(event => {
-    const eventCard = document.createElement('div');
-    eventCard.className = 'event-item';
-    eventCard.innerHTML = `
-      <div class="event-details">
-        <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">${event.title}</h4>
-        <p style="color: var(--text-secondary); font-size: var(--font-size-small);">${event.content?.substring(0, 120) || 'Upcoming event'}...</p>
-      </div>
-      <div class="event-date">
-        <div class="day">??</div>
-        <div class="month">??</div>
-      </div>
-    `;
-    container.appendChild(eventCard);
-  });
-}
-
-// Display news
-function displayNews(articles) {
-  const container = document.getElementById('news-container');
-  if (!container) return;
-  
-  // Remove placeholder if exists
-  container.querySelectorAll('.placeholder').forEach(el => el.remove());
-  
-  articles.slice(0, 6).forEach(article => {
-    const newsCard = document.createElement('div');
-    newsCard.className = 'news-item';
-    newsCard.innerHTML = `
-      <div class="news-content">
-        <h4 style="color: var(--primary-blue); margin-bottom: 0.75rem;">${article.title}</h4>
-        <p style="color: var(--text-secondary); font-size: var(--font-size-small); margin-bottom: 1rem; line-height: 1.6;">${article.content?.substring(0, 150) || 'Recent update'}...</p>
-        <a href="${article.link}" class="news-link" target="_blank" rel="noopener">Read More →</a>
-      </div>
-    `;
-    container.appendChild(newsCard);
-  });
-}
-
-// Display placeholder with message
-function displayPlaceholder(containerId, message) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-  
-  container.innerHTML = `
-    <div class="directory-placeholder" style="text-align: center; padding: 3rem 2rem;">
-      <p style="color: var(--text-light); font-size: var(--font-size-body);">${message}</p>
-    </div>
-  `;
-}
-
-// Demo events (fallback)
+// Display demo events
 function displayDemoEvents() {
   const container = document.getElementById('events-container');
   if (!container) return;
@@ -198,69 +254,55 @@ function displayDemoEvents() {
   const demoEvents = [
     {
       title: '🤝 Monthly Networking Breakfast',
-      date: '15 MAR',
-      description: 'Join us for a networking session with local business leaders. Light breakfast provided.'
+      date: 'MAR 15',
+      description: 'Join us for a networking session with local business leaders. Light breakfast provided.',
+      cta: 'RSVP Now'
     },
     {
       title: '📚 Business Workshop: Digital Transformation',
-      date: '22 MAR',
-      description: 'Learn how to leverage digital tools to grow your business in the modern economy.'
+      date: 'MAR 22',
+      description: 'Learn how to leverage digital tools to grow your business in the modern economy.',
+      cta: 'Register'
     },
     {
       title: '🌊 Coastal Clean-Up Day',
-      date: '05 APR',
-      description: 'Community event - Help keep our beautiful coastlines clean and beautiful.'
+      date: 'APR 05',
+      description: 'Community event - Help keep our beautiful coastlines clean and beautiful.',
+      cta: 'Sign Up'
+    },
+    {
+      title: '💼 Women in Business Breakfast',
+      date: 'APR 12',
+      description: 'Exclusive networking for women entrepreneurs in the Kouga region.',
+      cta: 'Learn More'
+    },
+    {
+      title: '🎓 Young Entrepreneurs Summit',
+      date: 'APR 20',
+      description: 'A day dedicated to mentoring and supporting young business leaders.',
+      cta: 'Register Now'
+    },
+    {
+      title: '🤝 Annual General Meeting',
+      date: 'MAY 08',
+      description: 'Join us for the annual AGM and hear about our achievements and future plans.',
+      cta: 'Get Details'
     }
   ];
   
-  demoEvents.forEach(event => {
+  demoEvents.forEach((event, index) => {
     const eventCard = document.createElement('div');
-    eventCard.className = 'event-item';
+    eventCard.className = 'card';
+    eventCard.style.animationDelay = `${index * 100}ms`;
     eventCard.innerHTML = `
-      <div class="event-details">
-        <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">${event.title}</h4>
-        <p style="color: var(--text-secondary); font-size: var(--font-size-small);">${event.description}</p>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-sm);">
+        <h3 style="margin: 0;">${event.title}</h3>
+        <span style="background: var(--accent); color: white; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600;">${event.date}</span>
       </div>
-      <div class="event-date">
-        <div class="day">??</div>
-        <div class="month">??</div>
-      </div>
+      <p style="color: var(--text-muted);">${event.description}</p>
+      <a href="#contact" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">${event.cta}</a>
     `;
     container.appendChild(eventCard);
-  });
-}
-
-// Demo news (fallback)
-function displayDemoNews() {
-  const container = document.getElementById('news-container');
-  if (!container) return;
-  
-  const demoNews = [
-    {
-      title: '📋 AGM 2026 Minutes Available',
-      description: 'The Annual General Meeting minutes from our 2026 AGM are now available for download.'
-    },
-    {
-      title: '🎉 PACA Report Released',
-      description: 'Our latest PACA report is now available, detailing our financial performance for the past year.'
-    },
-    {
-      title: '🤝 New Partnership Announced',
-      description: 'Exciting news! KBF has announced a strategic partnership to bring more business development resources.'
-    }
-  ];
-  
-  demoNews.forEach(news => {
-    const newsCard = document.createElement('div');
-    newsCard.className = 'news-item';
-    newsCard.innerHTML = `
-      <div class="news-content">
-        <h4 style="color: var(--primary-blue); margin-bottom: 0.75rem;">${news.title}</h4>
-        <p style="color: var(--text-secondary); font-size: var(--font-size-small); margin-bottom: 1rem; line-height: 1.6;">${news.description}</p>
-        <a href="#" class="news-link">Read More →</a>
-      </div>
-    `;
-    container.appendChild(newsCard);
   });
 }
 
@@ -268,4 +310,22 @@ function displayDemoNews() {
 if (typeof console !== 'undefined') {
   console.log('KBF Website initialized');
   console.log('RSS Feed URL:', RSS_FEED_URL);
+  console.log('Modern redesign loaded successfully');
+}
+
+// Performance: Lazy load images
+if (typeof IntersectionObserver !== 'undefined') {
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src || img.src;
+        imageObserver.unobserve(img);
+      }
+    });
+  });
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
 }
