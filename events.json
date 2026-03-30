@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T18:11:01.295Z",
+  "lastUpdated": "2026-03-30T18:28:29.471Z",
   "source": "https://9ty9.co.za/event/feed/",
   "count": 50,
   "events": [
@@ -12,7 +12,7 @@
       "day": "31",
       "month": "MAR",
       "description": "Tue, 31 March 2026 - 18:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/JJ-31April2026.jpg"
+      "image": "images/events/JJ-31April2026.jpg"
     },
     {
       "title": "Curry &amp; Quiz Night at  St Francis Links in St Francis Bay",
@@ -23,7 +23,7 @@
       "day": "31",
       "month": "MAR",
       "description": "Tue, 31 March 2026 - 19:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/CurryQuiz-28July2026.jpg"
+      "image": "images/events/CurryQuiz-28July2026.jpg"
     },
     {
       "title": "Pilates Classes at  Arthur Fennell Hall in Aston Bay",
@@ -34,7 +34,7 @@
       "day": "01",
       "month": "APR",
       "description": "Wed, 1 April 2026 - 08:00 - 09:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Pilates-Classes-Dec2026.jpg"
+      "image": "images/events/Pilates-Classes-Dec2026.jpg"
     },
     {
       "title": "Friends of the Library Bookstore at  Newton Community Hall in Jeffreys Bay",
@@ -45,7 +45,7 @@
       "day": "01",
       "month": "APR",
       "description": "Wed, 1 April 2026 - 09:00 - 12:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Friends-of-the-Library.jpg"
+      "image": "images/events/Friends-of-the-Library.jpg"
     },
     {
       "title": "Jacobus Silver at  De Viswijf in Jeffreys Bay",
@@ -56,7 +56,7 @@
       "day": "01",
       "month": "APR",
       "description": "Wed, 1 April 2026 - 17:30 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Jacobus-Silver-1April2026.jpg"
+      "image": "images/events/Jacobus-Silver-1April2026.jpg"
     },
     {
       "title": "Ocean Vibes at  The Backyard Beer Garden in Jeffreys Bay",
@@ -67,7 +67,7 @@
       "day": "01",
       "month": "APR",
       "description": "Wed, 1 April 2026 - 18:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Ocean-Vibes-1April2026.jpg"
+      "image": "images/events/Ocean-Vibes-1April2026.jpg"
     },
     {
       "title": "SANBS Blood Donation Clinic at  Fountains Mall in Jeffreys Bay",
@@ -78,7 +78,7 @@
       "day": "02",
       "month": "APR",
       "description": "Thu, 2 April 2026 - 11:00 - 16:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/SANBS-Blood-Donation-Clinic-28April2026.jpg"
+      "image": "images/events/SANBS-Blood-Donation-Clinic-28April2026.jpg"
     },
     {
       "title": "Acoustic Night at  The Backyard Beer Garden in Jeffreys Bay",
@@ -89,7 +89,7 @@
       "day": "02",
       "month": "APR",
       "description": "Thu, 2 April 2026 - 18:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Backyard-Acoustic-Night.jpg"
+      "image": "images/events/Backyard-Acoustic-Night.jpg"
     },
     {
       "title": "Splash Festival at  Kings Beach in Nelson Mandela Bay",
@@ -100,7 +100,7 @@
       "day": "02",
       "month": "APR",
       "description": "Fri, 3 April 2026 - Sun, 5 April 2026 - All Day",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/SpashFestival-5April2026.jpg"
+      "image": "images/events/SpashFestival-5April2026.jpg"
     },
     {
       "title": "Trans Kouga Wilderness Overlanding Tour | 3–11 April 2026 at  Baviaanskloof in Baviaanskloof",
@@ -111,7 +111,7 @@
       "day": "02",
       "month": "APR",
       "description": "Fri, 3 April 2026 - Sat, 11 April 2026 - All Day",
-      "image": "https://9ty9.co.za/wp-content/uploads/2025/11/Trans-Kouga-Wilderness-Overlanding-Tour-1.jpg"
+      "image": "images/events/Trans-Kouga-Wilderness-Overlanding-Tour-1.jpg"
     },
     {
       "title": "Rip Curl Gromsearch presented by Sea Harvest &amp; supported by the Royal St Andrews Hotel at   in",
@@ -122,7 +122,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - Mon, 6 April 2026 - 08:00 - 17:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Surfing-South-Africa-2.png"
+      "image": "images/events/Surfing-South-Africa-2.png"
     },
     {
       "title": "Royal St Andrew’s Hotel Rip Curl Cup at   in",
@@ -133,7 +133,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - Mon, 6 April 2026 - 08:00 - 17:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Surfing-South-Africa-3.png"
+      "image": "images/events/Surfing-South-Africa-3.png"
     },
     {
       "title": "Friends of the Library Bookstore at  Newton Community Hall in Jeffreys Bay",
@@ -144,7 +144,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - 09:00 - 12:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Friends-of-the-Library.jpg"
+      "image": "images/events/Friends-of-the-Library.jpg"
     },
     {
       "title": "Market Day at Suikerbossie at  Suikerbossie in Kabeljous",
@@ -155,7 +155,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - 10:00 - 15:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Market-at-Suikerbossie-6April2026.jpg"
+      "image": "images/events/Market-at-Suikerbossie-6April2026.jpg"
     },
     {
       "title": "Easter Egg Hunt at  Suikerbossie in Kabeljous",
@@ -166,7 +166,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - 11:00 - 12:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Easter-Egg-Hunt-3April2026.jpeg"
+      "image": "images/events/Easter-Egg-Hunt-3April2026.jpeg"
     },
     {
       "title": "What&#039;s Good In The Hood at  What&#039;s Good In The Hood in Gqeberha",
@@ -177,7 +177,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - 17:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Whats-Good-In-The-Hood-31Dec2026.jpg"
+      "image": "images/events/Whats-Good-In-The-Hood-31Dec2026.jpg"
     },
     {
       "title": "Just Us at  The Backyard Beer Garden in Jeffreys Bay",
@@ -188,7 +188,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - 18:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Just-Us-3April2026.jpg"
+      "image": "images/events/Just-Us-3April2026.jpg"
     },
     {
       "title": "Black River Gypsy at  Grand Prix  Sports Bar in Jeffreys Bay",
@@ -199,7 +199,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - 19:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/BRG-1May2026.jpg"
+      "image": "images/events/BRG-1May2026.jpg"
     },
     {
       "title": "Steve Graham’s MONSTERS OF ROCK at  St Francis Links in St Francis Bay",
@@ -210,7 +210,7 @@
       "day": "03",
       "month": "APR",
       "description": "Fri, 3 April 2026 - 20:00 - 22:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Steve-Graham-3April2026.jpg"
+      "image": "images/events/Steve-Graham-3April2026.jpg"
     },
     {
       "title": "Mentors Country Estate Parkrun at  Mentors Country Estate in Jeffreys Bay",
@@ -221,7 +221,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 08:00 - 09:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Mentors-Country-Estate-Parkrun.jpg"
+      "image": "images/events/Mentors-Country-Estate-Parkrun.jpg"
     },
     {
       "title": "St Francis Parkrun at  St Francis Links in St Francis Bay",
@@ -232,7 +232,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 08:00 - 09:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/St-Francis-Parkrun.jpg"
+      "image": "images/events/St-Francis-Parkrun.jpg"
     },
     {
       "title": "Aston Bay Market at  Aston Bay Community Hall in Aston Bay",
@@ -243,7 +243,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 09:00 - 13:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Astonbaai-Mark-2May2026.jpg"
+      "image": "images/events/Astonbaai-Mark-2May2026.jpg"
     },
     {
       "title": "Milkwood Farmers Market at  Milkwood Mark \\ Market in Jeffreys Bay",
@@ -254,7 +254,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 09:00 - 13:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2025/12/img_1_1774784526223.jpg"
+      "image": "images/events/img_1_1774784526223.jpg"
     },
     {
       "title": "St Francis Market at  St Francis Market in St Francis Bay",
@@ -265,7 +265,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 09:00 - 13:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/St-Francis-Market-26Dec2026.jpg"
+      "image": "images/events/St-Francis-Market-26Dec2026.jpg"
     },
     {
       "title": "Van Stadens River Farmers Market and Auction at  van Stadens River Farmers’ Association - Fitches Corner in Gqeberha",
@@ -276,7 +276,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 09:00 - 15:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2025/12/Farmers-Market-and-Auction.jpg"
+      "image": "images/events/Farmers-Market-and-Auction.jpg"
     },
     {
       "title": "Windsong Bohemian Market at  Windsong Bohemian Market in Gqeberha",
@@ -287,7 +287,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 09:30 - 14:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2025/12/Windsong-19Dec2026.jpg"
+      "image": "images/events/Windsong-19Dec2026.jpg"
     },
     {
       "title": "Garage Sale at  Elaine in Jeffreys Bay",
@@ -298,7 +298,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 10:00 - 15:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Garage-Sale-4April2026.jpeg"
+      "image": "images/events/Garage-Sale-4April2026.jpeg"
     },
     {
       "title": "The Auto Show Invitational at  St Francis Links in St Francis Bay",
@@ -309,7 +309,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 11:00 - 17:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/The-Auto-Show-Invitational-4Apr2026.jpg"
+      "image": "images/events/The-Auto-Show-Invitational-4Apr2026.jpg"
     },
     {
       "title": "Karaoke and afternoon tunes at the Backyard at  The Backyard Beer Garden in Jeffreys Bay",
@@ -320,7 +320,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 15:00 - 18:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Backyard-Karaoke.jpg"
+      "image": "images/events/Backyard-Karaoke.jpg"
     },
     {
       "title": "Karaoke at Fergo&#039;s Rhythm Bar at  Fergo’s Rhythm Bar in Jeffreys Bay",
@@ -331,7 +331,7 @@
       "day": "04",
       "month": "APR",
       "description": "Sat, 4 April 2026 - 19:00 - 23:59",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Karaoke-Dec2026.jpeg"
+      "image": "images/events/Karaoke-Dec2026.jpeg"
     },
     {
       "title": "Easter Crossways Village Market at  Crossways Village Market in Thornhill",
@@ -342,7 +342,7 @@
       "day": "05",
       "month": "APR",
       "description": "Sun, 5 April 2026 - 09:00 - 14:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Crossways-Village-Markets-5April2026.jpg"
+      "image": "images/events/Crossways-Village-Markets-5April2026.jpg"
     },
     {
       "title": "Sunday Funday at The Backyard at  The Backyard Beer Garden in Jeffreys Bay",
@@ -353,7 +353,7 @@
       "day": "05",
       "month": "APR",
       "description": "Sun, 5 April 2026 - 09:00 - 18:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Quintes-Sunday.jpg"
+      "image": "images/events/Quintes-Sunday.jpg"
     },
     {
       "title": "Easter Egg Hunt &amp; Treasure Hunt at Krantzkloof Guest Farm at  Krantz Kloof Guest Farm &amp; Lady Slipper Hiking Trail in Gqeberha",
@@ -364,7 +364,7 @@
       "day": "05",
       "month": "APR",
       "description": "Sun, 5 April 2026 - 11:00 - 17:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Easter-Egg-Hunt-5Apr2026.jpg"
+      "image": "images/events/Easter-Egg-Hunt-5Apr2026.jpg"
     },
     {
       "title": "Billy Raffoul at  The Music Kitchen in Gqeberha",
@@ -375,7 +375,7 @@
       "day": "05",
       "month": "APR",
       "description": "Sun, 5 April 2026 - 19:00 - 23:30",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Billy-Raffoul-5April2026.jpeg"
+      "image": "images/events/Billy-Raffoul-5April2026.jpeg"
     },
     {
       "title": "Watershed at  St Francis Brewing Co. in St Francis Bay",
@@ -386,7 +386,7 @@
       "day": "05",
       "month": "APR",
       "description": "Sun, 5 April 2026 - 19:00 - 22:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Watershed-5Apr2026.jpg"
+      "image": "images/events/Watershed-5Apr2026.jpg"
     },
     {
       "title": "Market Day at Suikerbossie at  Suikerbossie in Kabeljous",
@@ -397,7 +397,7 @@
       "day": "06",
       "month": "APR",
       "description": "Mon, 6 April 2026 - 10:00 - 15:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Market-at-Suikerbossie-6April2026.jpg"
+      "image": "images/events/Market-at-Suikerbossie-6April2026.jpg"
     },
     {
       "title": "Bingo at  Oppi Spektrum Coffee Shop in Jeffreys Bay",
@@ -408,7 +408,7 @@
       "day": "06",
       "month": "APR",
       "description": "Mon, 6 April 2026 - 16:30 - 19:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Bingo-6April2026.jpg"
+      "image": "images/events/Bingo-6April2026.jpg"
     },
     {
       "title": "Kouga Mayoral Cup  - Bowling at  Jeffreys Bay Bowling Club in Jeffreys Bay",
@@ -419,7 +419,7 @@
       "day": "06",
       "month": "APR",
       "description": "Mon, 6 April 2026 - 17:00 - 22:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Kouga-Mayoral-Cup-Bowling-6April2026.jpg"
+      "image": "images/events/Kouga-Mayoral-Cup-Bowling-6April2026.jpg"
     },
     {
       "title": "Curry &amp; Quiz Night at  St Francis Links in St Francis Bay",
@@ -430,7 +430,7 @@
       "day": "07",
       "month": "APR",
       "description": "Tue, 7 April 2026 - 19:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/CurryQuiz-28July2026.jpg"
+      "image": "images/events/CurryQuiz-28July2026.jpg"
     },
     {
       "title": "Friends of the Library Bookstore at  Newton Community Hall in Jeffreys Bay",
@@ -441,7 +441,7 @@
       "day": "08",
       "month": "APR",
       "description": "Wed, 8 April 2026 - 09:00 - 12:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Friends-of-the-Library.jpg"
+      "image": "images/events/Friends-of-the-Library.jpg"
     },
     {
       "title": "NATIONAL BREAKDOWN @ FERGOS - Sunken State, No Closure, Ghast, Cosmic Dyscracia at  Fergo’s Rhythm Bar in Jeffreys Bay",
@@ -452,7 +452,7 @@
       "day": "08",
       "month": "APR",
       "description": "Wed, 8 April 2026 - 19:00 - 23:59",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/NATIONAL-BREAKDOWN-8April2026.jpg"
+      "image": "images/events/NATIONAL-BREAKDOWN-8April2026.jpg"
     },
     {
       "title": "eThekwini Surf Pro at   in",
@@ -463,7 +463,7 @@
       "day": "09",
       "month": "APR",
       "description": "Thu, 9 April 2026 - Sun, 12 April 2026 - 08:00 - 17:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Surfing-South-Africa-4.png"
+      "image": "images/events/Surfing-South-Africa-4.png"
     },
     {
       "title": "Kouga Working World Kouga Working World Careers Expo at  Mentors Country Estate in Jeffreys Bay",
@@ -474,7 +474,7 @@
       "day": "09",
       "month": "APR",
       "description": "Thu, 9 April 2026 - Fri, 10 April 2026 - 08:30 - 15:30",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Working-World-Exhibition-10April2026.jpg"
+      "image": "images/events/Working-World-Exhibition-10April2026.jpg"
     },
     {
       "title": "Acoustic Night at  The Backyard Beer Garden in Jeffreys Bay",
@@ -485,7 +485,7 @@
       "day": "09",
       "month": "APR",
       "description": "Thu, 9 April 2026 - 18:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Backyard-Acoustic-Night.jpg"
+      "image": "images/events/Backyard-Acoustic-Night.jpg"
     },
     {
       "title": "Merrell Mammoth Adventure Race 2026 at  Woodridge College and Preparatory School in Thornhill",
@@ -496,7 +496,7 @@
       "day": "09",
       "month": "APR",
       "description": "Fri, 10 April 2026 - Sun, 12 April 2026 - All Day",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/01/Merrell-Mammoth-Adventure-Race-12April2026.jpg"
+      "image": "images/events/Merrell-Mammoth-Adventure-Race-12April2026.jpg"
     },
     {
       "title": "Kouga Mayoral Cup  - Chess at  Newton Community Hall in Jeffreys Bay",
@@ -507,7 +507,7 @@
       "day": "10",
       "month": "APR",
       "description": "Fri, 10 April 2026 - Sat, 11 April 2026 - 08:00 - 17:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Kouga-Mayoral-Cup-Chess-11April2026.jpg"
+      "image": "images/events/Kouga-Mayoral-Cup-Chess-11April2026.jpg"
     },
     {
       "title": "Friends of the Library Bookstore at  Newton Community Hall in Jeffreys Bay",
@@ -518,7 +518,7 @@
       "day": "10",
       "month": "APR",
       "description": "Fri, 10 April 2026 - 09:00 - 12:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/02/Friends-of-the-Library.jpg"
+      "image": "images/events/Friends-of-the-Library.jpg"
     },
     {
       "title": "Beginner Mosaic Class at  Oppi Spektrum Coffee Shop in Jeffreys Bay",
@@ -529,7 +529,7 @@
       "day": "10",
       "month": "APR",
       "description": "Fri, 10 April 2026 - 10:00 - 12:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Mocaic-Class-10April2026.jpg"
+      "image": "images/events/Mocaic-Class-10April2026.jpg"
     },
     {
       "title": "Black River Gypsy at  Grand Prix  Sports Bar in Jeffreys Bay",
@@ -540,7 +540,7 @@
       "day": "10",
       "month": "APR",
       "description": "Fri, 10 April 2026 - 19:00 - 21:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/BRG-1May2026.jpg"
+      "image": "images/events/BRG-1May2026.jpg"
     },
     {
       "title": "Kouga Mayoral Cup  - Basketball at  Kabeljous Beach in Jeffreys Bay",
@@ -551,7 +551,7 @@
       "day": "11",
       "month": "APR",
       "description": "Sat, 11 April 2026 - 08:00 - 17:00",
-      "image": "https://9ty9.co.za/wp-content/uploads/2026/03/Kouga-Mayoral-Cup-Basketball-11April2026.jpg"
+      "image": "images/events/Kouga-Mayoral-Cup-Basketball-11April2026.jpg"
     }
   ]
 }
