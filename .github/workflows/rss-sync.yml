@@ -1,7 +1,6 @@
 name: RSS Event Sync
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: '0 */6 * * *'  # Every 6 hours
 
@@ -18,152 +17,63 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Fetch and parse RSS feeds
+      - name: Fetch and sync events
         run: |
           node << 'EOFJS'
           const axios = require('axios');
           const fs = require('fs');
-          const path = require('path');
-          
+
           const RSS_URL = 'https://9ty9.co.za/event/feed/';
-          
-          // Fetch RSS feed
-          axios.get(RSS_URL, {
-            headers: {
-              'User-Agent': 'KBF-Website-Sync/1.0'
-            }
-          })
+
+          axios.get(RSS_URL, { headers: { 'User-Agent': 'KBF-Website-Sync/1.0' } })
           .then(response => {
-            // Parse RSS XML
             const xml = response.data;
             const items = [];
             const itemMatches = xml.match(/<item>([\s\S]*?)<\/item>/g) || [];
             
-            itemMatches.forEach(itemXml => {
+            itemMatches.forEach((itemXml, i) => {
               const title = (itemXml.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) || itemXml.match(/<title>(.*?)<\/title>/))?.[1] || 'Untitled';
               const link = (itemXml.match(/<link>(.*?)<\/link>/))?.[1] || '';
               const guid = (itemXml.match(/<guid>(.*?)<\/guid>/))?.[1] || link;
               const pubDate = (itemXml.match(/<pubDate>(.*?)<\/pubDate>/))?.[1] || '';
               const description = (itemXml.match(/<description><!\[CDATA\[(.*?)\]\]><\/description>/s) || itemXml.match(/<description>(.*?)<\/description>/s))?.[1] || '';
-              
-              // Extract image from description
               const imgMatch = description.match(/<img src='([^']+)'/);
               const image = imgMatch ? imgMatch[1] : null;
-              
-              // Clean description (remove HTML)
               const cleanDesc = description.replace(/<[^>]+>/g, '').trim();
-              
-              // Parse date
               const date = new Date(pubDate);
-              const dateStr = date.toISOString().split('T')[0];
-              const day = date.toLocaleDateString('en-ZA', { day: '2-digit' });
-              const month = date.toLocaleDateString('en-ZA', { month: 'short' }).toUpperCase();
               
               items.push({
                 title: title.trim(),
                 link,
                 guid,
                 pubDate,
-                date,
-                dateStr,
-                day,
-                month,
+                dateStr: date.toISOString().split('T')[0],
+                day: date.toLocaleDateString('en-ZA', { day: '2-digit' }),
+                month: date.toLocaleDateString('en-ZA', { month: 'short' }).toUpperCase(),
                 description: cleanDesc.substring(0, 200),
                 image
               });
             });
             
-            console.log(`Found ${items.length} events`);
-            
-            // Save events.json for JavaScript
+            // Save events.json
             fs.writeFileSync('events.json', JSON.stringify({
               lastUpdated: new Date().toISOString(),
               source: RSS_URL,
               count: items.length,
-              events: items.slice(0, 20) // Keep latest 20
+              events: items.slice(0, 20)
             }, null, 2));
             
-            // Create events directory
-            const eventsDir = '_events';
-            if (!fs.existsSync(eventsDir)) {
-              fs.mkdirSync(eventsDir);
-            }
-            
-            // Generate SEO-friendly event pages
-            items.slice(0, 20).forEach((event, index) => {
-              const slug = event.guid.split('/').pop().replace(/\/$/, '') || `event-${index}`;
-              const eventPage = `---
-layout: event
-title: "${event.title.replace(/"/g, '\\"')}"
-date: ${event.dateStr}
-image: ${event.image || ''}
-location: "${extractLocation(event.description)}"
-permalink: /events/${slug}/
----
-
-## ${event.title}
-
-**Date:** ${event.date.toLocaleDateString('en-ZA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-
-${event.description}
-
-**Link:** [More Information](${event.link})
-
----
-
-*Events powered by [9ty9.co.za](https://9ty9.co.za)*
-`;
-              
-              // Simple HTML version
-              const eventHtml = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${event.title} | KBF Events</title>
-  <meta name="description" content="${event.description.substring(0, 160)}">
-  <meta property="og:title" content="${event.title}">
-  <meta property="og:description" content="${event.description.substring(0, 200)}">
-  ${event.image ? `<meta property="og:image" content="${event.image}">` : ''}
-  <meta property="og:type" content="event">
-  <link rel="canonical" href="${event.link}">
-  <link rel="stylesheet" href="/css/event.css">
-</head>
-<body>
-  <header class="event-header">
-    <h1>${event.title}</h1>
-    <p class="event-date">${event.date.toLocaleDateString('en-ZA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
-  </header>
-  
-  <main class="event-content">
-    <p>${event.description}</p>
-    ${event.image ? `<img src="${event.image}" alt="${event.title}">` : ''}
-    <a href="${event.link}" class="btn" target="_blank">More Information</a>
-    <a href="/events/" class="btn btn-secondary">← Back to Events</a>
-  </main>
-  
-  <footer>
-    <p>Events powered by <a href="https://9ty9.co.za">9ty9.co.za</a></p>
-  </footer>
-</body>
-</html>`;
-              
-              fs.writeFileSync(path.join(eventsDir, `${slug}.html`), eventHtml);
-            });
-            
-            // Generate events index page
-            const indexHtml = `<!DOCTYPE html>
+            // Generate events.html
+            const eventsHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events | Kouga Business Forum</title>
-  <meta name="description" content="Discover events happening in and around Jeffreys Bay, St Francis Bay, and the greater Kouga Region. Community events, markets, sports, music, and more.">
-  <meta property="og:title" content="Events | Kouga Business Forum">
-  <meta property="og:description" content="Discover community events in the Kouga Region">
-  <link rel="canonical" href="/events/">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/events.css">
+  <meta name="description" content="Discover events in Jeffreys Bay, St Francis Bay & the Kouga Region. Community events, markets, sports, music, and more.">
+  <link rel="canonical" href="/events.html">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/events.css">
 </head>
 <body>
   <header class="header">
@@ -173,19 +83,18 @@ ${event.description}
         <div><span class="logo-text">Kouga Business Forum</span></div>
       </div>
       <nav class="nav">
-        <a href="/">Home</a>
-        <a href="/directory.html">Directory</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
     </div>
   </header>
-
   <section class="page-hero">
     <h1>Community Events</h1>
     <p>Discover what's happening in Jeffreys Bay, St Francis Bay & the Kouga Region</p>
   </section>
-
   <section class="section">
     <div class="container">
       <p class="last-updated">Last updated: ${new Date().toLocaleString('en-ZA')}</p>
@@ -197,15 +106,14 @@ ${items.slice(0, 20).map((event, i) => {
           <div class="event-info">
             <span class="event-date-badge">${event.day}<br>${event.month}</span>
             <h3>${event.title}</h3>
-            <p>${event.description.substring(0, 100)}...</p>
-            <a href="/_events/${slug}.html" class="btn btn-primary">View Details</a>
+            <p>${event.description}...</p>
+            <a href="${event.link}" class="btn btn-primary" target="_blank">More Info</a>
           </div>
         </div>`;
 }).join('\n')}
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <div class="container">
       <p>&copy; 2026 Kouga Business Forum. Events powered by <a href="https://9ty9.co.za">9ty9.co.za</a></p>
@@ -214,21 +122,13 @@ ${items.slice(0, 20).map((event, i) => {
 </body>
 </html>`;
             
-            fs.writeFileSync('events.html', indexHtml);
-            
-            console.log(`✓ Generated events.html + ${Math.min(items.length, 20)} event pages`);
-            console.log(`✓ Saved events.json`);
-            
+            fs.writeFileSync('events.html', eventsHtml);
+            console.log(`✓ Synced ${items.length} events`);
           })
-          .catch(error => {
-            console.error('Error:', error.message);
+          .catch(err => {
+            console.error('Error:', err.message);
             process.exit(1);
           });
-          
-          function extractLocation(desc) {
-            const match = desc.match(/at\s+([^0-9]+?)\s+in\s+/);
-            return match ? match[1].trim() : 'Kouga Region';
-          }
 EOFJS
 
       - name: Commit changes
@@ -236,18 +136,9 @@ EOFJS
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
           git add -A
-          
           if git diff --cached --quiet; then
-            echo "No changes to commit"
+            echo "No changes"
           else
-            git commit -m "chore: Sync community events from 9ty9.co.za"
+            git commit -m "chore: Auto-sync community events"
             git push
           fi
-
-      - name: Display results
-        run: |
-          echo "=== Generated Files ==="
-          ls -lh events.html events.json 2>/dev/null || true
-          echo ""
-          echo "=== Event Pages ==="
-          ls -lh _events/ 2>/dev/null | head -10 || true
