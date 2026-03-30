@@ -1,17 +1,21 @@
 # 📊 KBF Website - Project Progress
 
-**Last Updated:** 2026-03-30 17:47 UTC
-**Status:** Phase 1 Complete - Ready for Content Migration
+**Last Updated:** 2026-03-30 19:25 UTC
+**Status:** Phase 2 Active - Feature Development
 
 ---
 
 ## ✅ Completed Work
 
-### Website Structure (Phase 1)
-- [x] **Homepage** (`index.html`) - Modern design with hero, features, committee, gallery, directory preview, events, join form
+### Website Pages (Phase 1-2)
+- [x] **Homepage** (`index.html`) - Hero, features, committee, gallery, directory preview, join form
 - [x] **Business Directory** (`directory.html`) - Full listing with search & category/location filtering
 - [x] **About Us** (`about.html`) - Committee section with all 10 members and photos
 - [x] **Contact** (`contact.html`) - Contact form and information
+- [x] **Events Page** (`events.html`) - Community events from 9ty9.co.za (50 events)
+- [x] **KBF Events** (`kbevents.html`) - Placeholder for KBF official events
+- [x] **Membership** (`membership.html`) - 2026 pricing (R1,200/year or R100/month)
+- [x] **404 Page** (`404.html`) - Custom error page
 
 ### Design & Styling
 - [x] CSS centralized with shared variables
@@ -19,86 +23,90 @@
 - [x] Dark navy (#1a1a2e) header/footer
 - [x] Mobile responsive design with hamburger menu
 - [x] All pages consistent styling
+- [x] Favicon created and added to all pages
 
-### Committee Members (from kougabusinessforum.com)
-1. Lieb Swiegers - Chairman
-2. Johannes Barnard - Vice-Chair & Treasurer
-3. Dries du Preez - Executive Committee Member
-4. Gerhard Wilsnacht - Committee Member
-5. Waldo van Niekerk - Committee Member
-6. Frank Harpur - Committee Member
-7. Susan Lottering - Committee Member
-8. Ryno Matthee - Committee Member
-9. Jaco Bothma - Committee Member
-10. Fred Kemp - Committee Member
+### SEO & Performance
+- [x] `sitemap.xml` - Search engine sitemap
+- [x] `robots.txt` - Crawler instructions
+- [x] Meta tags on all pages
+- [x] Open Graph tags
+- [x] Clean URLs
 
-### Images Downloaded
-- KBF-LOGO.png
-- 10 committee member photos
-- Category images (Construction, Retail, Tourism, Agriculture, etc.)
-- Background images
+### Technical
+- [x] GitHub integration with PAT
+- [x] Auto RSS sync (every 6 hours)
+- [x] 43 event images downloaded locally
+- [x] Login references removed
 
-### Contact Info (Updated)
-- Email: office@kougabusinessforum.com
-- Phone: 063 902 1597 (mobile only - old 084 number removed)
+### Content
+- [x] 10 committee members with photos
+- [x] 50 community events synced
+- [x] Membership pricing page
+- [x] Privacy policy (POPIA compliant)
 
 ---
 
 ## 🔄 In Progress
 
-### Content Migration Planning
-- [ ] WordPress backup export (pending from client)
-- [ ] Meeting minutes migration (5-year legal requirement)
-- [ ] Newsletters archive
-- [ ] Blog posts archive
+### Directory with Membership Badges
+- [ ] Add "Verified Member" badge to paid members
+- [ ] Show/hide contact details based on membership
+- [ ] Add "Request Details" button for non-members
+- [ ] Create submission form for new businesses
+
+### Form Backend
+- [ ] Set up Formspree (waiting on user)
 
 ---
 
-## 📋 Next Steps (Phase 2: Content Migration)
+## 📋 Pending Tasks (Priority Order)
 
-### 1. Get WordPress Backup
-**Action needed from client:**
-```bash
-# Option A: XML Export
-Go to: https://kougabusinessforum.com/wp-admin/export.php
-Download: "All content" XML file
+### High Priority
+| Task | Status | Notes |
+|------|--------|-------|
+| **Directory Badges** | 🔄 In Progress | Add verified badge system |
+| **Form Backend** | ⏳ Waiting | User to set up Formspree |
+| **Membership Badges in Directory** | 🔄 In Progress | Show badge for paid members |
 
-# Option B: Full backup via All-in-One WP Migration plugin
-# Or cPanel full account backup
+### Medium Priority
+| Task | Status | Notes |
+|------|--------|-------|
+| **WordPress Migration** | ⏳ Waiting | Need backup from client |
+| **Meeting Minutes (5yr)** | ⏳ Waiting | Legal requirement |
+| **Newsletters Archive** | ⏳ Waiting | Need from WordPress |
+| **PayFast Integration** | ⏳ Waiting | Sync payments with directory |
+
+### Low Priority
+| Task | Status | Notes |
+|------|--------|-------|
+| **KBF Events Content** | ⏳ Waiting | Client finalizing 2026 events |
+| **SEO Audit** | ⏳ Pending | Full accessibility review |
+| **Custom Domain SSL** | ⏳ Waiting | Cloudflare + GitHub Pages |
+
+---
+
+## 🏛️ Directory Membership Architecture
+
+### Current State
+- All businesses visible in directory
+- No membership distinction
+- No payment integration
+
+### Target State
+| Feature | Status |
+|---------|--------|
+| Business listings | ✅ Working |
+| Category/location filters | ✅ Working |
+| Paid member badge | 🔄 Need to implement |
+| Contact details visible for paid | 🔄 Need to implement |
+| Add new business form | 🔄 Need to implement |
+| PayFast payment sync | ⏳ Waiting on WordPress backup |
+
+### Directory Badges (To Implement)
 ```
-
-### 2. Meeting Minutes (LEGAL REQUIREMENT - 5 Years)
-**South African law requires keeping meeting minutes for 5 years**
-- Need: AGM and EMC minutes from 2021-2026
-- Store in: `/minutes/` folder organized by year
-- Format: PDF downloads
-
-**Suggested structure:**
+🔵 = Paid/Verified Member (full details visible)
+⚪ = Free/Basic Listing (limited details)
 ```
-/minutes/
-  /2026/  AGM-2026-03.pdf, EMC-2026-01.pdf
-  /2025/  AGM-2025-03.pdf, EMC-2025-01.pdf, EMC-2025-02.pdf
-  /2024/  ...
-  /2023/
-  /2022/
-  /2021/
-```
-
-### 3. Newsletters Archive
-- Download as PDFs
-- Store in `/newsletters/` folder
-- Create index page linking to downloads
-
-### 4. Blog Posts
-- Option A: Full migration to `/blog/` pages
-- Option B: Archive as list with links to old site
-- Option C: Redirect old URLs
-
-### 5. Custom Pages to Migrate
-From current site:
-- Chairman's Updates
-- Members page
-- Other custom WordPress pages
 
 ---
 
@@ -107,70 +115,38 @@ From current site:
 ```
 kbf-web-2026/
 ├── index.html              # Homepage
-├── directory.html          # Business Directory
+├── directory.html          # Business Directory (with badges - to do)
 ├── about.html             # About Us + Committee
-├── contact.html           # Contact Form & Info
+├── contact.html           # Contact Form
+├── membership.html        # Membership Pricing (2026)
+├── kbevents.html          # KBF Events (placeholder)
+├── events.html            # Community Events (auto-synced)
+├── privacy-policy.html     # Privacy Policy
+├── 404.html              # Error Page
+├── sitemap.xml           # SEO Sitemap
+├── robots.txt           # Crawler config
+├── favicon.svg          # Site icon
 ├── css/
-│   └── style.css         # Centralized styles
+│   └── style.css        # Centralized styles
 ├── js/
-│   └── main.js           # Interactive functionality
+│   └── main.js          # Interactive functionality
 ├── images/
-│   ├── KBF-LOGO.png
-│   ├── Vice-chair-Lieb-Swiegers.jpg
-│   ├── Johannes-Barnard.jpg
-│   ├── Dries-du-Preez.jpg
-│   ├── GW-1.jpg          # Gerhard Wilsnacht
-│   ├── Waldo-van-Niekerk.jpg
-│   ├── Frank-Harpur-1-1.jpg
-│   ├── Susan-Lottering.jpg
-│   ├── Ryno-Matthee.jpg
-│   ├── Jaco-Bothma.jpg
-│   ├── Fred-Kemp.jpg
+│   ├── committee/       # 10 member photos
+│   ├── events/          # 43 event images
 │   └── [category images]
-├── minutes/              # TODO: Meeting minutes (5 years)
-├── newsletters/          # TODO: Newsletter PDFs
-├── blog/                 # TODO: Blog posts archive
-├── resources/            # TODO: Custom pages
 ├── .github/
 │   └── workflows/
-│       └── rss-sync.yml  # RSS feed automation
-├── README.md
-├── TODO.md
-├── LOCK.md
-├── AGENTS.md
-└── PROGRESS.md          # This file
+│       └── rss-sync.yml  # Auto-sync community events
+└── PROGRESS.md         # This file
 ```
 
 ---
 
 ## 🔗 Live Site
 
-**URL:** https://rynomster.particl.io/kbf-web-2026/
+**URL:** https://new.kougabusinessforum.com/
 
 **GitHub:** https://github.com/rynomster/kbf-web-2026/
-
----
-
-## ⚙️ Technical Details
-
-### Color Palette (from mockup)
-```css
---primary-dark: #1a1a2e     /* Header, footer */
---primary: #16213e           /* Backgrounds */
---primary-light: #0f3460     /* Gradients */
---accent-cyan: #06c8ff      /* Primary accent */
---accent-teal: #0e7996       /* Secondary accent */
---accent-gradient: linear-gradient(135deg, #06c8ff 0%, #0e7996 100%)
-```
-
-### GitHub PAT
-- Configured in git remote URL
-- Has push, PR, and Issues access
-
-### RSS Feed
-- URL: https://9ty9.co.za/event/feed/
-- Format: Atom feed
-- GitHub Actions workflow ready for daily sync
 
 ---
 
@@ -178,58 +154,59 @@ kbf-web-2026/
 
 - **Email:** office@kougabusinessforum.com
 - **Phone:** 063 902 1597 (mobile)
-- **Location:** Jeffreys Bay, Kouga Region
 
-### Regions Served
-- Jeffreys Bay
-- Humansdorp
-- St. Francis Bay
-- Hankey
-- Patensie
-- Loerie
-- Thornhill
+### Membership Pricing
+- **Annual:** R1,200/year
+- **Monthly:** R200 + R100/month (via PayFast)
+- **Complimentary:** Free for NGOs, schools, churches
 
 ---
 
-## 🔜 Future Enhancements (Phase 3+)
+## ⏳ Waiting On Client
 
-- [ ] Form backend integration (email on submission)
-- [ ] Search functionality across all pages
-- [ ] Member-only content section (password protected)
+| Item | Status | Last Request |
+|------|--------|--------------|
+| Formspree setup | ⏳ Pending | User to sign up at formspree.io |
+| WordPress backup | ⏳ Pending | Export XML + download media |
+| KBF 2026 events | ⏳ Pending | Client finalizing calendar |
+| Member list (paid) | ⏳ Pending | Who has paid for 2026 |
+
+---
+
+## 🔜 Future Enhancements
+
+- [ ] Directory membership badge system
+- [ ] Business submission form
+- [ ] PayFast payment integration
+- [ ] Member-only content section
+- [ ] Meeting minutes archive (5yr requirement)
+- [ ] Newsletter archive
 - [ ] Event registration integration
-- [ ] Newsletter subscription integration
+- [ ] Newsletter subscription
 - [ ] Social media links
-- [ ] Google Analytics setup
-- [ ] SEO optimization
-- [ ] Custom domain setup (new.kougabusinessforum.com)
-- [ ] SSL certificate (via Cloudflare)
+- [ ] Google Analytics
+- [ ] Accessibility audit (WCAG)
 
 ---
 
 ## 📝 Notes
 
-- Old phone number 084 681 3702 removed from all pages (2026-03-30)
-- Committee photos downloaded from kougabusinessforum.com
-- CSS merged from multiple files into single centralized style.css
-- All pages use consistent mobile breakpoints
+- Login/portal references removed (no backend yet)
+- Community events synced from 9ty9.co.za
+- KBF events page is placeholder
+- SSL enabled via Cloudflare
+- Custom domain: new.kougabusinessforum.com
 
 ---
 
 ## 🚀 To Resume Work
 
 1. Pull latest: `git pull origin main`
-2. Check PROGRESS.md for current status
-3. Check TODO.md for pending tasks
-4. Review LOCK.md for active work
-
-**For content migration:**
-1. Get WordPress XML export from client
-2. Parse with Python script
-3. Download media files
-4. Create static HTML pages
-5. Organize into folders
-6. Update navigation
+2. Check this PROGRESS.md
+3. Check TODO.md for task details
+4. Review LOCK.md if needed
 
 ---
 
 *Built with ❤️ for the Kouga Business Community*
+*Last updated: 2026-03-30*

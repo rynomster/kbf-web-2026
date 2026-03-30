@@ -1,79 +1,88 @@
 # 📋 TODO.md - Task Tracking
 
-## Current Sprint: Sprint 3 - Content & Polish
+## Current Sprint: Sprint 5 - Directory Membership System
 
 ### Completed ✅
 
 | Task | Description | Status | Notes |
 |------|-------------|--------|-------|
-| T1 | Visual Audit - Review reference site | ✅ Complete | Extracted design patterns from mockup |
-| T2 | Component Mapping | ✅ Complete | Mapped KBF sections to new components |
-| T3 | New CSS Architecture | ✅ Complete | CSS variables, modern design system |
-| T4 | Homepage Redesign | ✅ Complete | Hero, features, gallery, directory, events |
-| T5 | Committee Section | ✅ Complete | All 10 committee members with photos |
-| T6 | CSS Logo Implementation | ✅ Complete | Cyan gradient logo matching mockup |
-| T7 | Mobile Optimization | ✅ Complete | Responsive breakpoints, hamburger menu |
-| T8 | GitHub Integration | ✅ Complete | PAT configured, pushes working |
+| T1 | Website Structure | ✅ Complete | All pages created |
+| T2 | Design System | ✅ Complete | CSS centralized |
+| T3 | Committee Section | ✅ Complete | 10 members with photos |
+| T4 | Community Events | ✅ Complete | 50 events, auto-sync |
+| T5 | Membership Page | ✅ Complete | R1,200/year, R100/month |
+| T6 | SEO Basics | ✅ Complete | sitemap, robots, meta |
+| T7 | Mobile Responsive | ✅ Complete | Hamburger menu |
+| T8 | Login Removal | ✅ Complete | No backend needed |
+| T9 | Privacy Policy | ✅ Complete | POPIA compliant |
 
 ### In Progress 🔄
 
 | Task | Description | Status | Notes |
 |------|-------------|--------|-------|
-| - | None currently | - | - |
+| T10 | Directory Badges | 🔄 In Progress | Add paid member badges |
+| T11 | Business Submission Form | 🔄 In Progress | Add new businesses |
 
 ### Pending ⏳
 
 | Task | Description | Priority | Notes |
 |------|-------------|----------|-------|
-| P1 | RSS Feed Sync Testing | Medium | Verify events load from 9ty9.co.za |
-| P2 | Form Backend Integration | High | Connect form to email/service |
-| P3 | Business Directory Page | High | Full directory with filtering |
-| P4 | About Us Page | Medium | Detailed about section |
-| P5 | Contact Page | Medium | Split layout with map |
-| P6 | Image Optimization | Low | Lazy loading, compression |
+| P1 | Formspree Setup | High | User to sign up |
+| P2 | Member Payment Status | High | Who's paid for 2026 |
+| P3 | WordPress Migration | Medium | Meeting minutes, newsletters |
+| P4 | PayFast Integration | Medium | Sync with directory |
+| P5 | KBF Events Content | Medium | 2026 events calendar |
+| P6 | Accessibility Audit | Low | WCAG compliance |
+
+---
+
+## Directory Membership System (Current Focus)
+
+### Badge System
+```
+🔵 KBF Verified Member = Paid 2026 membership
+⚪ Basic Listing = Free/guest listing
+```
+
+### Implementation Tasks
+1. Add badge field to business data
+2. Show badge on directory cards
+3. Show/hide contact details based on status
+4. Add "Request Details" button for non-members
 
 ---
 
 ## Completed Sprints
 
 ### Sprint 1: Foundation ✅
-- [x] Initial site structure created
-- [x] Base CSS styling applied
-- [x] JavaScript interactivity implemented
-- [x] GitHub Actions workflow set up
-- [x] Design system extracted from mockups
+- [x] Initial site structure
+- [x] Base CSS styling
+- [x] JavaScript interactivity
+- [x] GitHub Actions workflow
 
 ### Sprint 2: Visual Overhaul ✅
-- [x] Modern CSS design system implemented
-- [x] Color palette: Cyan (#06c8ff), Teal (#0e7996), Navy (#1a1a2e)
-- [x] Component library: Cards, buttons, forms
-- [x] Navigation: Fixed header with logo, menu
-- [x] Footer: Contact methods, regions, quick links
+- [x] Modern CSS design
+- [x] Color palette (Cyan/Teal)
+- [x] Navigation with mobile menu
+- [x] Footer design
 
 ### Sprint 3: Content & Polish ✅
-- [x] Committee section with all 10 members
-- [x] CSS-based logo with gradient matching mockup
-- [x] Hero section with gradient background
-- [x] Features grid with numbered cards
-- [x] Gallery section with image overlays
-- [x] Mobile hamburger menu
-- [x] GitHub PAT integration
+- [x] Committee with photos
+- [x] CSS logo
+- [x] Hero section
+- [x] All pages connected
 
----
+### Sprint 4: Events & Pages ✅
+- [x] Community events (RSS sync)
+- [x] KBF events placeholder
+- [x] Membership page
+- [x] Privacy policy
 
-## Upcoming Sprints
-
-### Sprint 4: Pages & Functionality
-- [ ] **Business Directory Page** - Full member listing with category/location filtering
-- [ ] **About Us Page** - Mission, values, history
-- [ ] **Contact Page** - Split layout with form and map
-- [ ] **RSS Feed Integration** - Sync events from 9ty9.co.za
-
-### Sprint 5: Polish & Optimization
-- [ ] **Image Optimization** - Lazy loading, compression
-- [ ] **Accessibility Audit** - WCAG compliance check
-- [ ] **Cross-browser Testing** - All major browsers
-- **Performance Tuning** - Core Web Vitals optimization
+### Sprint 5: Directory Membership 🔄
+- [x] Remove login
+- [ ] Badge system
+- [ ] Submission form
+- [ ] Contact details visibility
 
 ---
 
@@ -81,16 +90,16 @@
 
 | Metric | Value |
 |--------|-------|
-| Total Tasks | 14 |
-| Completed | 8 |
-| In Progress | 0 |
-| Pending | 6 |
-| Completion % | 57% |
+| Total Tasks | 15 |
+| Completed | 9 |
+| In Progress | 2 |
+| Pending | 4 |
+| Completion % | 73% |
 
 ---
 
 ## Last Updated
 
-**2026-03-30 15:35 UTC** - Sprint 3 complete, committee section added
+**2026-03-30 19:25 UTC** - Sprint 5 active, directory badges in progress
 
 **Maintained by:** Jock (Main Agent)
