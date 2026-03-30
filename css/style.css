@@ -1,3 +1,21 @@
+/* ============================
+   COLOR SYSTEM - MOCKUP MATCHING
+   ============================ */
+
+:root {
+  /* Mockup Colors */
+  --primary-dark: #1a1a2e;
+  --primary: #16213e;
+  --primary-light: #0f3460;
+  --accent-cyan: #06c8ff;
+  --accent-teal: #0e7996;
+  --accent-gradient: linear-gradient(135deg, #06c8ff 0%, #0e7996 100%);
+  --white: #ffffff;
+  --bg-light: #f8f9fa;
+  --text-dark: #1a1a2e;
+  --text-muted: #a0a0a0;
+}
+
 /* KBF Website - Modern Redesign CSS */
 
 :root {
@@ -5,7 +23,7 @@
   --primary-dark: #1a1a2e;
   --primary: #16213e;
   --primary-light: #0f3460;
-  --accent: #e94560;
+  --accent: #06c8ff;
   --accent-light: #ff6b6b;
   --secondary: #533483;
   --text-dark: #1a1a2e;
@@ -127,7 +145,7 @@ p {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--accent-cyan);
   color: white;
   box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
 }
@@ -215,7 +233,7 @@ p {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent);
+  background: var(--accent-cyan);
   transition: width var(--transition-normal);
 }
 
@@ -229,7 +247,7 @@ p {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: var(--bg-gradient);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   padding: var(--spacing-xl) 0 var(--spacing-lg);
   overflow: hidden;
 }
@@ -315,7 +333,7 @@ p {
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--bg-gradient);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   transform: scaleX(0);
   transition: transform var(--transition-normal);
 }
@@ -335,7 +353,7 @@ p {
   height: 64px;
   margin-bottom: var(--spacing-sm);
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-teal));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,7 +375,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--accent);
+  color: var(--accent-cyan);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
@@ -387,7 +405,7 @@ p {
   width: 80px;
   height: 80px;
   margin: 0 auto var(--spacing-sm);
-  background: var(--bg-gradient);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -420,7 +438,7 @@ p {
 .quick-access-item:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--accent);
+  border-color: var(--accent-cyan);
 }
 
 .quick-access-icon {
@@ -516,7 +534,7 @@ p {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--accent);
+  border-color: var(--accent-cyan);
 }
 
 /* Footer */
@@ -631,7 +649,7 @@ p {
   margin: 0 auto var(--spacing-sm);
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid var(--accent);
+  border: 4px solid var(--accent-cyan);
   box-shadow: var(--shadow-md);
 }
 
@@ -652,7 +670,7 @@ p {
 }
 
 .committee-role {
-  color: var(--accent);
+  color: var(--accent-cyan);
   font-weight: 600;
   font-size: 0.9rem;
   margin: 0;
@@ -675,7 +693,8 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(6, 200, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(6, 200, 255, 0.4);
+  border: none;
 }
 
 .logo-icon::before {
@@ -761,7 +780,7 @@ p {
 
 /* Header with Logo */
 .header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -811,13 +830,14 @@ p {
 
 /* Button Styling */
 .btn-primary {
-  background: linear-gradient(135deg, #06c8ff 0%, #00b1e4 100%);
+  background: linear-gradient(135deg, #06c8ff 0%, #0e7996 100%);
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(6, 200, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(6, 200, 255, 0.5);
   transition: all 0.3s ease;
+  border: none;
 }
 
 .btn-primary:hover {
@@ -938,7 +958,7 @@ p {
     top: 60px;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
