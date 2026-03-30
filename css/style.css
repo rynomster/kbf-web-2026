@@ -612,3 +612,48 @@ p {
 .mb-1 { margin-bottom: var(--spacing-xs); }
 .mb-2 { margin-bottom: var(--spacing-sm); }
 .hidden { display: none; }
+
+/* Committee Section */
+.committee-card {
+  text-align: center;
+  padding: var(--spacing-md);
+  transition: all var(--transition-normal);
+}
+
+.committee-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.committee-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto var(--spacing-sm);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.committee-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.committee-card:hover .committee-image img {
+  transform: scale(1.1);
+}
+
+.committee-info h3 {
+  margin: 0 0 var(--spacing-xs);
+  font-size: 1.1rem;
+}
+
+.committee-role {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0;
+}
