@@ -1,0 +1,51 @@
+name: Update Directory from Google Sheets
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Google Sheets Data
+        run: |
+          # Use the CSV export URL with the secret Sheet ID
+          curl -L "https://docs.google.com/spreadsheets/d/${{ secrets.GOOGLE_SHEET_ID }}/gviz/tq?tqx=out:csv" -o directory_raw.csv
+
+      - name: Convert CSV to JSON
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Run Conversion Script
+        run: |
+          node -e '
+          const fs = require("fs");
+          const csv = fs.readFileSync("directory_raw.csv", "utf8");
+          const lines = csv.split("\n").filter(l => l.trim());
+          const headers = lines[0].replace(/"/g, "").split(",");
+          const data = lines.slice(1).map(line => {
+            const values = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
+            const obj = {};
+            headers.forEach((h, i) => {
+              let val = (values[i] || "").replace(/^"|"$/g, "");
+              if (val === "TRUE") val = true;
+              if (val === "FALSE") val = false;
+              obj[h.trim().toLowerCase()] = val;
+            });
+            return obj;
+          });
+          fs.writeFileSync("directory.json", JSON.stringify({ listings: data }, null, 2));
+          '
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add directory.json
+          git commit -m "🤖 Auto-sync directory from Google Sheets" || echo "No changes to commit"
+          git push
