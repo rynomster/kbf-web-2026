@@ -11,35 +11,29 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="logo-container">
-        <div class="logo-icon">
-          <span class="logo-icon-text">KBF</span>
-        </div>
-        <div>
-          <span class="logo-text">Kouga Business Forum</span>
-        </div>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="kbevents.html">KBF Events</a>
-        <a href="events.html">Community</a>
-        <a href="about.html">About</a>
-        <a href="membership.html">Membership</a>
-        <a href="directory.html">Directory</a>
-        <a href="submit.html">Submit</a>
-        <a href="#events">Events</a>
-        <a href="#contact" class="btn btn-primary">Join Now</a>
-      </nav>
-      </nav>
+  <!-- shared-header.html -->
+<header class="header">
+  <div class="container">
+    <div class="logo-container">
+      <div class="logo-icon"><span class="logo-icon-text">KBF</span></div>
+      <div><span class="logo-text">Kouga Business Forum</span></div>
     </div>
-  </header>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="kbevents.html">KBF Events</a>
+      <a href="events.html">Community</a>
+      <a href="about.html">About</a>
+      <a href="membership.html">Membership</a>
+      <a href="directory.html">Directory</a>
+      <a href="submit.html">Submit</a>
+      <a href="contact.html" class="btn btn-primary">Join Now</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -76,30 +70,6 @@
             To establish a credible and purposeful business forum that will through effective leadership and collective negotiation, further the interest of all members.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Access Grid -->
-  <section class="section">
-    <div class="container">
-      <div class="quick-access">
-        <a href="#events" class="quick-access-item">
-          <div class="quick-access-icon">📅</div>
-          <span class="quick-access-title">Events Calendar</span>
-        </a>
-        <a href="#directory" class="quick-access-item">
-          <div class="quick-access-icon">🏢</div>
-          <span class="quick-access-title">Business Directory</span>
-        </a>
-        <a href="#news" class="quick-access-item">
-          <div class="quick-access-icon">📰</div>
-          <span class="quick-access-title">News & Updates</span>
-        </a>
-        <a href="#contact" class="quick-access-item">
-          <div class="quick-access-icon">🤝</div>
-          <span class="quick-access-title">Join the Forum</span>
-        </a>
       </div>
     </div>
   </section>
@@ -170,173 +140,67 @@
     </div>
   </section>
 
-  <!-- Committee Section -->
-  <section id="about" class="section" style="background: var(--bg-light);">
+  <!-- Member Spotlight Section -->
+  <section id="spotlight" class="section" style="background: var(--bg-light);">
     <div class="container">
       <div class="section-header">
-        <h2>Meet Our Committee</h2>
-        <p>Dedicated leaders working to advance business in the Kouga Region.</p>
+        <h2>Celebrating Our Members</h2>
+        <p>Every business has a story. We showcase our members to highlight their achievements and inspire collaboration.</p>
       </div>
+      <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 3rem;">
+        <div style="font-size: 3rem; color: var(--accent-cyan); margin-bottom: 1.5rem;">"</div>
+        <p style="font-size: 1.5rem; font-style: italic; line-height: 1.6; color: var(--text-main); margin-bottom: 2rem;">
+          Joining the Forum gave my business visibility I never imagined. The networking opportunities alone are worth the membership.
+        </p>
+        <div style="font-weight: 700; color: var(--accent-cyan);">– Local Entrepreneur</div>
+        <div style="font-size: 0.9rem; color: var(--text-muted);">Kouga Region Business Owner</div>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-        <!-- Lieb Swiegers - Chairman -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Vice-chair-Lieb-Swiegers.jpg" alt="Lieb Swiegers">
-          </div>
-          <div class="committee-info">
-            <h3>Lieb Swiegers</h3>
-            <p class="committee-role">Chairman</p>
-          </div>
+  <!-- Advocacy & Impact Section -->
+  <section id="advocacy" class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+        <div>
+          <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-main);">Your Business, Your Voice</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
+            We represent Kouga businesses in local decision-making, ensuring your interests are heard. From policy discussions to community initiatives, we stand for growth and fairness.
+          </p>
+          <a href="#" class="btn btn-primary">Read More About Our Advocacy</a>
         </div>
-
-        <!-- Johannes Barnard - Vice-Chair & Treasurer -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Johannes-Barnard.jpg" alt="Johannes Barnard">
-          </div>
-          <div class="committee-info">
-            <h3>Johannes Barnard</h3>
-            <p class="committee-role">Vice-Chair & Treasurer</p>
-          </div>
-        </div>
-
-        <!-- Dries du Preez - Executive -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Dries-du-Preez.jpg" alt="Dries du Preez">
-          </div>
-          <div class="committee-info">
-            <h3>Dries du Preez</h3>
-            <p class="committee-role">Executive Committee Member</p>
-          </div>
-        </div>
-
-        <!-- Gerhard Wilsnacht -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/GW-1.jpg" alt="Gerhard Wilsnacht">
-          </div>
-          <div class="committee-info">
-            <h3>Gerhard Wilsnacht</h3>
-            <p class="committee-role">Committee Member</p>
-          </div>
-        </div>
-
-        <!-- Waldo van Niekerk -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Waldo-van-Niekerk.jpg" alt="Waldo van Niekerk">
-          </div>
-          <div class="committee-info">
-            <h3>Waldo van Niekerk</h3>
-            <p class="committee-role">Committee Member</p>
-          </div>
-        </div>
-
-        <!-- Frank Harpur -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Frank-Harpur-1-1.jpg" alt="Frank Harpur">
-          </div>
-          <div class="committee-info">
-            <h3>Frank Harpur</h3>
-            <p class="committee-role">Committee Member</p>
-          </div>
-        </div>
-
-        <!-- Susan Lottering -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Susan-Lottering.jpg" alt="Susan Lottering">
-          </div>
-          <div class="committee-info">
-            <h3>Susan Lottering</h3>
-            <p class="committee-role">Committee Member</p>
-          </div>
-        </div>
-
-        <!-- Ryno Matthee -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Ryno-Matthee.jpg" alt="Ryno Matthee">
-          </div>
-          <div class="committee-info">
-            <h3>Ryno Matthee</h3>
-            <p class="committee-role">Committee Member</p>
-          </div>
-        </div>
-
-        <!-- Jaco Bothma -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Jaco-Bothma.jpg" alt="Jaco Bothma">
-          </div>
-          <div class="committee-info">
-            <h3>Jaco Bothma</h3>
-            <p class="committee-role">Committee Member</p>
-          </div>
-        </div>
-
-        <!-- Fred Kemp -->
-        <div class="card committee-card">
-          <div class="committee-image">
-            <img src="images/Fred-Kemp.jpg" alt="Fred Kemp">
-          </div>
-          <div class="committee-info">
-            <h3>Fred Kemp</h3>
-            <p class="committee-role">Committee Member</p>
+        <div class="card" style="background: var(--accent-gradient); color: white; padding: 3rem;">
+          <h3 style="color: white; margin-bottom: 1rem;">Making a Difference</h3>
+          <p style="opacity: 0.9; margin-bottom: 2rem;">We are currently digging through our archives and newsletters to showcase the tangible impact KBF has made in the region over the years. Stay tuned for specific case studies.</p>
+          <div style="display: flex; gap: 1rem; font-size: 0.9rem; font-weight: 600;">
+            <div style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 4px;">Policy Influence</div>
+            <div style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 4px;">Community Growth</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="section">
+  <!-- Quick Access Grid -->
+  <section class="section">
     <div class="container">
-      <div class="section-header">
-        <h2>Community in Action</h2>
-        <p>See what's happening at KBF events and across the Kouga business community.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/ocean-warming-climate-change-earth_1big_stock.jpg" alt="Jeffreys Bay Coastline">
-          <div class="gallery-overlay">
-            <span class="card-link">Jeffreys Bay</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/Green-Alternative-Energy.jpg" alt="Green Energy">
-          <div class="gallery-overlay">
-            <span class="card-link">Sustainability</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/Transport-Automotive.jpg" alt="Automotive Industry">
-          <div class="gallery-overlay">
-            <span class="card-link">Automotive</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/citrus_farming.jpg" alt="Citrus Farming">
-          <div class="gallery-overlay">
-            <span class="card-link">Agriculture</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/Trade-Finance.jpg" alt="Trade Finance">
-          <div class="gallery-overlay">
-            <span class="card-link">Finance</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/Construction.jpg" alt="Construction">
-          <div class="gallery-overlay">
-            <span class="card-link">Construction</span>
-          </div>
-        </div>
+      <div class="quick-access">
+        <a href="#events" class="quick-access-item">
+          <div class="quick-access-icon">📅</div>
+          <span class="quick-access-title">Events Calendar</span>
+        </a>
+        <a href="#directory" class="quick-access-item">
+          <div class="quick-access-icon">🏢</div>
+          <span class="quick-access-title">Business Directory</span>
+        </a>
+        <a href="#news" class="quick-access-item">
+          <div class="quick-access-icon">📰</div>
+          <span class="quick-access-title">News & Updates</span>
+        </a>
+        <a href="#contact" class="quick-access-item">
+          <div class="quick-access-icon">🤝</div>
+          <span class="quick-access-title">Join the Forum</span>
+        </a>
       </div>
     </div>
   </section>
@@ -501,53 +365,46 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Kouga Business Forum</h4>
-          <p style="line-height: 1.8;">The voice of business in the Kouga Region. Connecting entrepreneurs, leaders, and innovators across Jeffreys Bay, Humansdorp, St. Francis Bay, Hankey, Patensie, Loerie, and Thornhill.</p>
-        </div>
-
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="directory.html">Business Directory</a></li>
-            <li><a href="#events">Events Calendar</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Join Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4>Contact Us</h4>
-          <ul class="footer-links">
-            <li><a href="mailto:office@kougabusinessforum.com">office@kougabusinessforum.com</a></li>
-            <li><a href="tel:+27639021597">063 902 1597</a></li>
-            <li>Jeffreys Bay, Kouga Region</li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4>Regions</h4>
-          <ul class="footer-links">
-            <li>Jeffreys Bay</li>
-            <li>Humansdorp</li>
-            <li>St. Francis Bay</li>
-            <li>Hankey</li>
-            <li>Patensie</li>
-            <li>Loerie</li>
-            <li>Thornhill</li>
-          </ul>
-        </div>
+  <!-- shared-footer.html -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Kouga Business Forum</h4>
+        <p style="line-height: 1.8;">The voice of business in the Kouga Region. Connecting entrepreneurs, leaders, and innovators across Jeffreys Bay, Humansdorp, St. Francis Bay, Hankey, Patensie, Loerie, and Thornhill.</p>
       </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Kouga Business Forum. All rights reserved.</p>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="directory.html">Business Directory</a></li>
+          <li><a href="events.html">Events Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="membership.html">Join Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:office@kougabusinessforum.com">office@kougabusinessforum.com</a></li>
+          <li><a href="tel:+27639021597">063 902 1597</a></li>
+          <li>Jeffreys Bay, Kouga Region</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Regions</h4>
+        <ul class="footer-links">
+          <li>Jeffreys Bay, Humansdorp, St. Francis Bay, Hankey, Patensie, Loerie, Thornhill</li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kouga Business Forum. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 
   <script src="js/main.js"></script>
 </body>

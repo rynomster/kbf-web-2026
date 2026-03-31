@@ -12,32 +12,29 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="logo-container">
-        <div class="logo-icon">
-          <span class="logo-icon-text">KBF</span>
-        </div>
-        <div>
-          <span class="logo-text">Kouga Business Forum</span>
-        </div>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="membership.html">Membership</a>
-        <a href="directory.html">Directory</a>
-        <a href="submit.html">Submit</a>
-        <a href="events.html">Events</a>
-        <a href="contact.html" class="btn btn-primary">Contact</a>
-      </nav>
+  <!-- shared-header.html -->
+<header class="header">
+  <div class="container">
+    <div class="logo-container">
+      <div class="logo-icon"><span class="logo-icon-text">KBF</span></div>
+      <div><span class="logo-text">Kouga Business Forum</span></div>
     </div>
-  </header>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="kbevents.html">KBF Events</a>
+      <a href="events.html">Community</a>
+      <a href="about.html">About</a>
+      <a href="membership.html">Membership</a>
+      <a href="directory.html">Directory</a>
+      <a href="submit.html">Submit</a>
+      <a href="contact.html" class="btn btn-primary">Join Now</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero Section -->
   <section class="page-hero">
@@ -505,11 +502,46 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Kouga Business Forum. Events powered by <a href="https://9ty9.co.za">9ty9.co.za</a></p>
+  <!-- shared-footer.html -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Kouga Business Forum</h4>
+        <p style="line-height: 1.8;">The voice of business in the Kouga Region. Connecting entrepreneurs, leaders, and innovators across Jeffreys Bay, Humansdorp, St. Francis Bay, Hankey, Patensie, Loerie, and Thornhill.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="directory.html">Business Directory</a></li>
+          <li><a href="events.html">Events Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="membership.html">Join Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:office@kougabusinessforum.com">office@kougabusinessforum.com</a></li>
+          <li><a href="tel:+27639021597">063 902 1597</a></li>
+          <li>Jeffreys Bay, Kouga Region</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Regions</h4>
+        <ul class="footer-links">
+          <li>Jeffreys Bay, Humansdorp, St. Francis Bay, Hankey, Patensie, Loerie, Thornhill</li>
+        </ul>
+      </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kouga Business Forum. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
   
   <script src="js/main.js"></script>
 </body>
