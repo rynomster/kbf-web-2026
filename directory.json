@@ -1,0 +1,28 @@
+{
+  "listings": [
+    {
+      "id": 1,
+      "name": "Jeffreys Bay Builders",
+      "category": "construction",
+      "location": "jeffreys-bay",
+      "description": "Professional residential and commercial builders with 25+ years of experience. Specializing in renovations, extensions, and new builds.",
+      "contact": "0437123456",
+      "email": "info@jebb.co.za",
+      "icon": "🏗️",
+      "verified": true,
+      "membership_year": 2026
+    },
+    {
+      "id": 2,
+      "name": "Humansdorp Gift Shop",
+      "category": "retail",
+      "location": "humansdorp",
+      "description": "Handcrafted gifts, local art, and souvenirs. Supporting local artisans.",
+      "contact": "0437234567",
+      "email": "shop@humansdorpgift.co.za",
+      "icon": "🛍️",
+      "verified": true,
+      "membership_year": 2026
+    }
+  ]
+}
