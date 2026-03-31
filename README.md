@@ -70,7 +70,7 @@ kbf-web-2026/
 | Directory | Business listings with search & category/location filters | ✅ Live |
 | About | Committee members with photos | ✅ Live |
 | Contact | Contact form & information | ✅ Live |
-| Membership | 2026 pricing (R1200 annual OR R200 + R100/month) | ✅ Live |
+| Membership | 2026 pricing (R200 + R100/mo or R1200 annual) | ✅ Live |
 | KBF Events | Official KBF events | ✅ Placeholder |
 | Community Events | Auto-synced from RSS | ✅ Auto-synced |
 | Privacy Policy | POPIA compliant | ✅ Live |
@@ -92,13 +92,21 @@ kbf-web-2026/
 
 ## 💰 Membership Pricing (2026)
 
-**Regular Members:**
-- **Annual:** R1,200 one-time (all year access)
-- **Monthly:** R200 one-time + R100/month (via PayFast)
-- **Complimentary:** Free for NGOs, schools, churches
+### Monthly Option
+- **R200 one-time registration fee** (one-time only)
+- **R100 per month** (ongoing subscription)
+- **Total per year:** R1,400
+- **Savings vs Annual:** R200/year
 
-**New Members on Annual:**
-- **Annual (New):** R100 one-time (remaining months only)
+### Annual Option
+- **R1,200 one-time** (existing members, full year access)
+
+### New Members / Remaining Months
+- **R100 per month** for remaining months of the year
+- *Example:* Joining in April = 9 months × R100 = **R900**
+
+### Complimentary
+- **Free** for NGOs, schools, churches
 
 ## 🔐 Directory Membership System
 

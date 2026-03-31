@@ -293,7 +293,7 @@ git push origin main
 
 ## Last Updated
 
-**2026-03-31 22:10 UTC** - Updated membership pricing: R1200 annual OR R200 + R100/month; new members R100
+**2026-03-31 22:15 UTC** - Updated pricing: R200 reg + R100/mo or R1200 annual; new R100/mo remaining
 
 **Maintained by:** Jock (Main Agent)
 
