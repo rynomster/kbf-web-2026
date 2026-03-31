@@ -13,7 +13,7 @@ const footer = fs.readFileSync(path.join(templatesDir, 'footer.html'), 'utf8').t
 const files = fs.readdirSync(__dirname).filter(f => f.endsWith('.html') && !f.includes('shared-'));
 
 files.forEach(file => {
-    let content = fs.readFileSync(path.join(__dirname, file), 'utf8');
+    let content = fs.readFileSync(path.join(__dirname, file), 'utf8').replace(/\n+$/, '');
     
     // Replace existing shared comments and header/footer blocks
     // This removes any existing <!-- shared-header.html --> outside the tag and the header itself.
