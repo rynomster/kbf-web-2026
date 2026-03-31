@@ -10,7 +10,7 @@
 | T2 | Design System | ✅ Complete | CSS centralized |
 | T3 | Committee Section | ✅ Complete | 10 members with photos |
 | T4 | Community Events | ✅ Complete | 50 events, auto-sync |
-| T5 | Membership Page | ✅ Complete | R200 annual + R100/month |
+| T5 | Membership Page | ✅ Complete | R1200 annual OR R200 + R100/month; new members R100 |
 | T6 | SEO Basics | ✅ Complete | sitemap, robots, meta |
 | T7 | Mobile Responsive | ✅ Complete | Hamburger menu |
 | T8 | Login Removal | ✅ Complete | No backend needed |
@@ -105,6 +105,6 @@
 
 ## Last Updated
 
-**2026-03-31 21:56 UTC** - Sprint 5 completed, all directory tasks done
+**2026-03-31 22:10 UTC** - Updated membership pricing to R1200 annual OR R200 + R100/month; new members R100
 
 **Maintained by:** Jock (Main Agent)
