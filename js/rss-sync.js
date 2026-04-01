@@ -27,11 +27,21 @@ async function syncEvents() {
 
   try {
     // Use curl instead of axios - Cloudflare trusts curl more than Node.js
-    const curlCmd = `curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -H "Accept: application/rss+xml, application/xml, text/xml, */*" -H "Referer: https://9ty9.co.za/" "${RSS_URL}"`;
-    const xml = execSync(curlCmd, { timeout: 15000, encoding: 'utf8' });
+    const curlCmd = `curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -H "Accept: application/rss+xml, application/xml, text/xml, */*" -H "Referer: https://9ty9.co.za/" -w "\\n%{http_code}" "${RSS_URL}"`;
+    const curlOutput = execSync(curlCmd, { timeout: 15000, encoding: 'utf8' });
+    const lines = curlOutput.trim().split('\n');
+    const httpCode = lines.pop();
+    const xml = lines.join('\n');
+
+    console.log(`RSS fetch HTTP status: ${httpCode}, content length: ${xml.length}`);
 
     if (!xml || xml.trim() === '') {
-      throw new Error('Empty response from RSS feed');
+      throw new Error(`Empty response from RSS feed (HTTP ${httpCode})`);
+    }
+
+    if (!xml.includes('<item>')) {
+      console.log('Response does not contain <item> tags. First 500 chars:');
+      console.log(xml.substring(0, 500));
     }
     const items = [];
     const itemMatches = xml.match(/<item>([\s\S]*?)<\/item>/g) || [];
