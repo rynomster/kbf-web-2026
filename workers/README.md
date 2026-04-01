@@ -166,22 +166,22 @@ MEMBERSHIP_PRICING = "R200 one-time + R100/month OR R1200 annual"
 
 [[routes]]
 zone_name = "kougabusinessforum.com"
-pattern = "kbf-web-2026/api/membership"
+pattern = "api/membership"
 methods = ["POST"]
 
 [[routes]]
 zone_name = "kougabusinessforum.com"
-pattern = "kbf-web-2026/api/directory"
+pattern = "api/directory"
 methods = ["POST"]
 
 [[routes]]
 zone_name = "kougabusinessforum.com"
-pattern = "kbf-web-2026/api/submissions/:submissionId"
+pattern = "api/submissions/:submissionId"
 methods = ["GET"]
 
 [[routes]]
 zone_name = "kougabusinessforum.com"
-pattern = "kbf-web-2026/api/admin/webhook"
+pattern = "api/admin/webhook"
 methods = ["POST"]
 ```
 
