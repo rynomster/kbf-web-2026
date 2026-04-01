@@ -1,6 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const RSS_URL = 'https://9ty9.co.za/event/feed/';
 const IMAGES_DIR = 'images/events';
@@ -25,18 +26,13 @@ async function syncEvents() {
   }
 
   try {
-    const response = await axios.get(RSS_URL, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'application/rss+xml, application/xml, text/xml, */*',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Referer': 'https://9ty9.co.za/',
-        'Origin': 'https://9ty9.co.za'
-      },
-      timeout: 15000
-    });
+    // Use curl instead of axios - Cloudflare trusts curl more than Node.js
+    const curlCmd = `curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -H "Accept: application/rss+xml, application/xml, text/xml, */*" -H "Referer: https://9ty9.co.za/" "${RSS_URL}"`;
+    const xml = execSync(curlCmd, { timeout: 15000, encoding: 'utf8' });
 
-    const xml = response.data;
+    if (!xml || xml.trim() === '') {
+      throw new Error('Empty response from RSS feed');
+    }
     const items = [];
     const itemMatches = xml.match(/<item>([\s\S]*?)<\/item>/g) || [];
 
