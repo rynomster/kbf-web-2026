@@ -20,8 +20,7 @@
 | T12 | PayFast Integration | ✅ Complete | Payment buttons added |
 | T13 | Directory Backend | ✅ Complete | Google Sheets integration |
 | T14 | Build.js Header Standardization | ✅ Complete | Consistent headers across all pages |
-| T15 | Homepage Dynamic Events | ✅ Complete | Dynamic loading from events.json |
-| T16 | Homepage Layout Refactor | ✅ Complete | Aligned with target structure |
+| T15 | Homepage Data Integration & CTA Fix | ✅ Complete | Real event data and optimized links |
 
 ### Pending ⏳
 

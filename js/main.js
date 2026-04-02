@@ -145,7 +145,7 @@ function initializeScrollAnimations() {
   });
 }
 
-// Load and display events from events.json
+// Load and display events from local data
 async function loadEvents() {
   try {
     const response = await fetch(EVENTS_JSON_URL);
@@ -155,10 +155,11 @@ async function loadEvents() {
     }
     
     const data = await response.json();
-    const events = data.events;
     
-    if (events && events.length > 0) {
-      displayEvents(events);
+    if (data.events && data.events.length > 0) {
+      displayEvents(data.events);
+    } else {
+      displayDemoEvents();
     }
   } catch (error) {
     console.log('Using demo events:', error.message);
@@ -166,15 +167,18 @@ async function loadEvents() {
   }
 }
 
-// Display real events from events.json
+/**
+ * Display events on the homepage
+ * @param {Array} events - List of event objects
+ */
 function displayEvents(events) {
   const container = document.getElementById('events-container');
   if (!container) return;
 
-  // Clear existing content to prevent duplicates
+  // Clear existing content
   container.innerHTML = '';
   
-  // Display the first 3 events
+  // Show first 3 upcoming events
   const featuredEvents = events.slice(0, 3);
   
   featuredEvents.forEach((event, index) => {
@@ -186,8 +190,8 @@ function displayEvents(events) {
         <h3 style="margin: 0;">${event.title}</h3>
         <span style="background: var(--accent-gradient); color: white; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600;">${event.day} ${event.month}</span>
       </div>
-      <p style="color: var(--text-muted);">${event.description.length > 120 ? event.description.substring(0, 120) + '...' : event.description}</p>
-      <a href="${event.link}" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">More Info</a>
+      <p style="color: var(--text-muted);">${event.description}</p>
+      <a href="${event.link}" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;" target="_blank">More Info</a>
     `;
     container.appendChild(eventCard);
   });
@@ -247,7 +251,7 @@ function displayDemoEvents() {
     eventCard.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-sm);">
         <h3 style="margin: 0;">${event.title}</h3>
-        <span style="background: var(--accent); color: white; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600;">${event.date}</span>
+        <span style="background: var(--accent-gradient); color: white; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600;">${event.date}</span>
       </div>
       <p style="color: var(--text-muted);">${event.description}</p>
       <a href="#contact" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">${event.cta}</a>
@@ -259,7 +263,7 @@ function displayDemoEvents() {
 // Utility: Console logging for debugging
 if (typeof console !== 'undefined') {
   console.log('KBF Website initialized');
-  console.log('Events URL:', EVENTS_JSON_URL);
+  console.log('Events Source:', EVENTS_JSON_URL);
   console.log('Modern redesign loaded successfully');
 }
 
