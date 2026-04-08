@@ -6,16 +6,15 @@
 ---
 
 ## 🏗️ Current Sprint: Homepage Redesign
-We are pivoting to a cleaner, action-oriented homepage structure.
 
-- [ ] **Fix Hero Section:** Update headline to "The Voice of Business in the Kouga Region".
-- [ ] **Layout Reordering:** Sequence: Hero -> Intro -> Committee -> Directory -> Events -> Gallery -> News -> Footer.
-- [ ] **Content Pruning:** Move dense Mission/Vision text to the About page.
-- [ ] **Slogan & Branding:** Finalize slogan and lock brand voice/messaging.
-- [ ] **Advocacy & Impact:** Develop dedicated Advocacy page and municipal tracking.
-- [ ] **Membership Clarity:** Improve signup UX and benefit communication.
-- [ ] **Afrikaans Support:** Implement multi-language strategy (EN/AF).
-- [ ] **Live Previews:** Implement previews for Events, News, and Gallery.
+- [x] **Fix Hero Section:** ✅ Headline updated to "The Voice of Business in the Kouga Region" (2026-04-08)
+- [x] **Layout Reordering:** ✅ Hero → Intro → Committee → Directory → Events → Gallery → News → Advocacy → Join (2026-04-08)
+- [x] **Content Pruning:** ✅ Mission/Vision removed from homepage, lives on About page (2026-04-08)
+- [x] **Slogan & Branding:** ✅ Brand messaging locked - "The Voice of Business" capitalized as brand term (2026-04-08)
+- [ ] **Quick Action Cards:** ⏳ Link to #news is a placeholder (News section not yet live)
+- [ ] **Membership Clarity:** ⏳ Improve signup UX and benefit communication
+- [ ] **Afrikaans Support:** ⏳ Plan i18n approach (EN/AF)
+- [ ] **Advocacy Page:** ⏳ Dedicated Advocacy & Impact page needed (currently a section)
 
 ---
 
