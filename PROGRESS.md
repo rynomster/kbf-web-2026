@@ -251,3 +251,9 @@ kbf-web-2026/
 
 **Overall Project Status:** 82% Complete
 **Current Phase:** Post-Launch Maintenance & Polish
+## 2026-04-09 - Homepage Improvement & i18n Audit
+- **Cleanup**: Removed duplicate committee sections in `index.html`.
+- **Links**: Fixed broken `#news` anchor links; redirected to `about.html#news` and updated "Coming Soon" placeholders with working links.
+- **Buttons**: Standardized CTA buttons using new utility classes (`btn-sm`, `btn-block`).
+- **CSS**: Added utility classes for opacity, cursors, and button sizing to `style.css`.
+- **i18n**: Audited Afrikaans pages (`af/`); updated `af/index.html` to match the new committee design and fixed broken links.
