@@ -100,9 +100,12 @@ function initializeForms() {
 
         if (response.ok) {
           // Show success message
-          newsletterForm.style.display = 'none';
           if (newsletterSuccess) {
+            newsletterForm.style.display = 'none';
             newsletterSuccess.style.display = 'block';
+          } else {
+            alert('Thank you! You\'ve been successfully subscribed to our newsletter.');
+            this.reset();
           }
         } else {
           throw new Error('Subscription failed');
@@ -135,10 +138,12 @@ function initializeForms() {
       
       setTimeout(() => {
         // Show success message
-        joinForm.style.display = 'none';
         if (joinSuccess) {
+          joinForm.style.display = 'none';
           joinSuccess.style.display = 'block';
           joinSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          alert('Thank you for your interest in joining the Kouga Business Forum. Our team will review your application and contact you shortly.');
         }
         
         // Reset form
