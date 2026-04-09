@@ -22,6 +22,7 @@
 | T14 | Build.js Header Standardization | ✅ Complete | Consistent headers across all pages |
 | T15 | Homepage Dynamic Events | ✅ Complete | Dynamic loading from events.json |
 | T16 | Homepage Layout Refactor | ✅ Complete | Aligned with target structure |
+| T17 | CSS Refactoring | ✅ Complete | Moved inline styles to style.css and standardized utility classes |
 
 ### Pending ⏳
 
@@ -45,6 +46,7 @@
 | P16 | Meeting Summaries | Low | Simplified, readable governance highlights |
 | P17 | WordPress Migration | Low | Meeting minutes, newsletters archive |
 | P18 | PayFast Sync | Low | Sync payment status with directory badges |
+
 
 ---
 

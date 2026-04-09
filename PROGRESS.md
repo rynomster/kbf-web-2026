@@ -1,6 +1,6 @@
 # 📊 KBF Website - Project Progress
 
-**Last Updated:** 2026-04-08 19:45 UTC
+**Last Updated:** 2026-04-09 06:34 UTC
 **Status:** Phase 2.5 - Homepage Redesign & Content Strategy
 
 ---
@@ -14,6 +14,7 @@
 - [ ] **Quick Action Cards:** ⏳ Link to #news is a placeholder (News section not yet live)
 - [ ] **Membership Clarity:** ⏳ Improve signup UX and benefit communication
 - [ ] **Afrikaans Support:** ⏳ Plan i18n approach (EN/AF)
+- [x] **CSS Refactoring:** ✅ Moved inline styles from HTML to style.css (2026-04-09)
 - [ ] **Advocacy Page:** ⏳ Dedicated Advocacy & Impact page needed (currently a section)
 
 ---
