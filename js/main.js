@@ -122,38 +122,6 @@ function initializeForms() {
     });
   }
 
-  // Join Form
-  const joinForm = document.getElementById('join-form');
-  const joinSuccess = document.getElementById('join-success');
-  if (joinForm) {
-    joinForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Simulate submission with animation
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      
-      submitBtn.textContent = 'Submitting...';
-      submitBtn.disabled = true;
-      
-      setTimeout(() => {
-        // Show success message
-        if (joinSuccess) {
-          joinForm.style.display = 'none';
-          joinSuccess.style.display = 'block';
-          joinSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-          alert('Thank you for your interest in joining the Kouga Business Forum. Our team will review your application and contact you shortly.');
-        }
-        
-        // Reset form
-        this.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 1500);
-    });
-  }
-
   // Contact form links
   const contactLinks = document.querySelectorAll('footer .footer-links a[href^="mailto:"]');
   contactLinks.forEach(link => {
@@ -182,6 +150,11 @@ function initializeForms() {
       if (subjectSelect) subjectSelect.value = 'complimentary';
       if (messageTextarea) {
         messageTextarea.value = `I am interested in applying for complimentary membership for our organization.\n\nOrganization Name: \nType (NGO/School/Church): \n\n[Please add any additional information here]`;
+      }
+    } else if (inquiry === 'events') {
+      if (subjectSelect) subjectSelect.value = 'events';
+      if (messageTextarea) {
+        messageTextarea.value = `I am interested in more information about an upcoming event.\n\nEvent Name: \n\n[Please add your specific questions here]`;
       }
     }
   }
@@ -324,7 +297,7 @@ function displayDemoEvents() {
         <span style="background: var(--accent); color: white; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600;">${event.date}</span>
       </div>
       <p style="color: var(--text-muted);">${event.description}</p>
-      <a href="#contact" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">${event.cta}</a>
+      <a href="contact.html?inquiry=events" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">${event.cta}</a>
     `;
     container.appendChild(eventCard);
   });
