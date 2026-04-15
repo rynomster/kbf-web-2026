@@ -142,7 +142,7 @@ p {
 
 .btn-primary {
   background: var(--accent-gradient);
-  color: white;
+  color: white !important;
   box-shadow: 0 4px 15px rgba(6, 200, 255, 0.4);
   border: none;
 }
@@ -154,6 +154,10 @@ p {
   box-shadow: 0 6px 24px rgba(6, 200, 255, 0.5);
 }
 
+.btn-primary:visited {
+  color: white !important;
+}
+
 .btn-newsletter:hover {
   transform: scale(1.05);
   box-shadow: var(--shadow-md);
@@ -161,13 +165,17 @@ p {
 
 .btn-secondary {
   background: var(--primary-light);
-  color: white;
+  color: white !important;
 }
 
 .btn-secondary:hover {
   background: var(--primary);
   color: white;
   transform: translateY(-2px);
+}
+
+.btn-secondary:visited {
+  color: white !important;
 }
 
 .btn-outline {
