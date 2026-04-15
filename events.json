@@ -1,41 +1,8 @@
 {
-  "lastUpdated": "2026-04-14T00:00:25.540Z",
+  "lastUpdated": "2026-04-15T00:00:26.112Z",
   "source": "https://9ty9.co.za/event/feed",
-  "count": 81,
+  "count": 80,
   "events": [
-    {
-      "title": "Friends of the Library Bookstore at  Newton Community Hall in Jeffreys Bay",
-      "link": "https://9ty9.co.za/events/friends-of-the-library-bookstore-2026-02-04-2026-02-06-2026-02-11-2026-02-13-2026-02-18-2026-02-20-2026-02-25-2026-02-27-2026-03-04-2026-03-06-2026-03-11-2026-03-13-2026-03-18-2026-03-20-03-2026-04-08/",
-      "guid": "https://9ty9.co.za/events/friends-of-the-library-bookstore-2026-02-04-2026-02-06-2026-02-11-2026-02-13-2026-02-18-2026-02-20-2026-02-25-2026-02-27-2026-03-04-2026-03-06-2026-03-11-2026-03-13-2026-03-18-2026-03-20-03-2026-04-08/",
-      "pubDate": "Wed, 08 Apr 2026 07:00:00 +0000",
-      "dateStr": "2026-04-08",
-      "day": "08",
-      "month": "APR",
-      "description": "Wed, 8 April 2026 - 09:00 - 12:00",
-      "image": "images/events/Friends-of-the-Library.jpg"
-    },
-    {
-      "title": "NATIONAL BREAKDOWN @ FERGOS - Sunken State, No Closure, Ghast, Cosmic Dyscracia at  Fergo’s Rhythm Bar in Jeffreys Bay",
-      "link": "https://9ty9.co.za/events/national-breakdown-fergos-sunken-state-no-closure-ghast-cosmic-dyscracia/",
-      "guid": "https://9ty9.co.za/events/national-breakdown-fergos-sunken-state-no-closure-ghast-cosmic-dyscracia/",
-      "pubDate": "Wed, 08 Apr 2026 17:00:00 +0000",
-      "dateStr": "2026-04-08",
-      "day": "08",
-      "month": "APR",
-      "description": "Wed, 8 April 2026 - 19:00 - 23:59",
-      "image": "images/events/NATIONAL-BREAKDOWN-8April2026.jpg"
-    },
-    {
-      "title": "Kuns &amp; Klets at  Fab - Ri creations in Jeffreys Bay",
-      "link": "https://9ty9.co.za/events/kuns-klets-2026-04-08/",
-      "guid": "https://9ty9.co.za/events/kuns-klets-2026-04-08/",
-      "pubDate": "Wed, 08 Apr 2026 09:00:00 +0000",
-      "dateStr": "2026-04-08",
-      "day": "08",
-      "month": "APR",
-      "description": "Wed, 8 April 2026 - 11:00 - 13:00",
-      "image": "images/events/Kuns-en-Klets-Club-Bont-31July2026.jpg"
-    },
     {
       "title": "eThekwini Surf Pro at   in",
       "link": "https://9ty9.co.za/events/ethekwini-surf-pro/",
@@ -772,6 +739,28 @@
       "month": "APR",
       "description": "Fri, 24 April 2026 - 19:00 - 21:00",
       "image": "images/events/BRG-1May2026.jpg"
+    },
+    {
+      "title": "Night Market at Suikerbossie at  Suikerbossie in Kabeljous",
+      "link": "https://9ty9.co.za/events/night-market-at-suikerbossie/",
+      "guid": "https://9ty9.co.za/events/night-market-at-suikerbossie/",
+      "pubDate": "Fri, 24 Apr 2026 14:00:00 +0000",
+      "dateStr": "2026-04-24",
+      "day": "24",
+      "month": "APR",
+      "description": "Fri, 24 April 2026 - 16:00 - 20:00",
+      "image": "images/events/Market-at-Suikerbossie-24April2026.jpg"
+    },
+    {
+      "title": "Paint a Bag at  Black Sheep Bistro in Aston Bay",
+      "link": "https://9ty9.co.za/events/paint-a-bag/",
+      "guid": "https://9ty9.co.za/events/paint-a-bag/",
+      "pubDate": "Fri, 24 Apr 2026 16:00:00 +0000",
+      "dateStr": "2026-04-24",
+      "day": "24",
+      "month": "APR",
+      "description": "Fri, 24 April 2026 - 18:00 - 20:00",
+      "image": "images/events/Paint-a-Bag-24April2026.jpg"
     },
     {
       "title": "EP Waveski Open at  Magnatubes in Jeffreys Bay",
