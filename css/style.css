@@ -1511,11 +1511,20 @@ textarea {
   max-width: 600px;
   margin: 2rem auto 0;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon-inside {
+  position: absolute;
+  left: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
 }
 
 .directory-search {
   width: 100%;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1.5rem 1.25rem 3.5rem;
   font-size: 1rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
